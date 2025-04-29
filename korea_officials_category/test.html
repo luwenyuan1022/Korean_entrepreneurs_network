@@ -1,0 +1,3675 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no"/>
+
+    <title>
+        직원록자료 &lt;
+
+
+        한국 현대 사료 DB
+    </title>
+
+    <link rel="shortcut icon" href="/resources/images/nikh_icon.ico">
+
+    <link rel="stylesheet" type="text/css" href="/resources/fonts/NotoSans.css?ver=1.0">
+    <link rel="stylesheet" type="text/css" href="/resources/fonts/nanumsquare.css">
+    <link rel="stylesheet" type="text/css" href="/resources/js/lib/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="/resources/css/reset.css?ver=1.1">
+    <link rel="stylesheet" type="text/css" href="/resources/contemp/css/common.css?ver=1.1">
+
+
+    <link rel="stylesheet" type="text/css" href="/resources/contemp/css/sub.css?ver=1.4">
+
+
+    <script type="text/javascript" src="/resources/js/makePCookie.js"></script>
+
+    <script src="/resources/js/lib/jquery-3.4.1.min.js"></script>
+    <script src="/resources/js/lib/swiper.min.js"></script>
+    <script src="/resources/js/nikhhdb.js?ver=1.1"></script>
+    <script src="/resources/contemp/js/common.js?ver=1.1"></script>
+    <script src="/resources/contemp/js/commonFunc.js"></script>
+
+
+    <!--
+
+
+
+			   		<script src="/resources/contemp/js/sub.js"></script>
+
+
+		     -->
+    <script src="/resources/contemp/js/sub.js"></script>
+
+
+</head>
+<body>
+
+<!--바로가기-->
+<div id="accessibility"><a href="#gnb">주메뉴 바로가기</a><a href="#container">내용 바로가기</a><a href="#footer">하단 바로가기</a></div>
+<!--//바로가기-->
+
+<div id="wrap">
+
+    <!-- header -->
+
+
+    <header id="header">
+        <div class="header-inner">
+            <div class="header-top">
+
+
+                <div class="header-logo">
+                    <a href="/contemp/main.do" class="logo">
+                        <div class="symbol"><img src="/resources/contemp/images/header_logo_contemp.svg" alt="logo"
+                                                 title="logo"/></div>
+                        <div class="home"><img src="/resources/contemp/images/cmn_logo_contemp_m.svg" alt="logo"
+                                               title="logo"/></div>
+                        <div class="type1">한국 현대<br/>사료 DB</div>
+                    </a>
+                    <div class="type2">
+
+
+                        <a href="/contemp/jw/level.do">직원록자료</a>
+
+
+                        <input type="hidden" id="itemId" value="jw"/>
+
+
+                        <input type="hidden" id="periodCodeUrl" value="modern"/>
+
+
+                        <a href="javascript:;" class="popup-data">자료소개</a>
+
+
+                    </div>
+                </div>
+                <div class="link-wrap">
+                    <div class="link-box link-box1">
+                        <a href="https://www.history.go.kr" target="_blank"><img
+                                src="/resources/contemp/images/header_logo_history.svg" alt="국사편찬위원회" title="국사편찬위원회"/></a>
+                        <a href="/">한국사데이터베이스</a>
+                    </div>
+                    <div class="link-box link-box2">
+                        <a href="javascript:;" class="popup-info"><img
+                                src="/resources/contemp/images/header_ico_info.svg" alt="사이트 소개" title="사이트 소개"/></a>
+                        <!-- <a href="javascript:;" class="helfInfo"><img src="/resources/contemp/images/header_ico_help.svg" alt="도움말" title="도움말" /></a> -->
+                        <a href="/contemp/notice/noticeList.do"><img
+                                src="/resources/contemp/images/header_ico_notice.svg" alt="공지사항" title="공지사항"></a>
+                    </div>
+                </div>
+                <div class="util-mob">
+                    <ul>
+                        <li><a href="javascript:;" class="btn-search">검색</a></li>
+
+                        <li><a href="#menu2-submenu-mobile" class="btn-menu2">기타메뉴</a></li>
+                    </ul>
+                </div>
+
+
+            </div>
+            <div id="gnb" class="position-fixed">
+                <div class="header-fixed-inner">
+                    <div class="header-nav">
+                        <div class="menu-list">
+                            <a href="javascript:;" onclick="return false;">
+                                <span>사료<br/>목록</span>
+                                <div class="bar"><span></span><span></span><span></span></div>
+                            </a>
+                        </div>
+                        <div class="search-form">
+                            <form>
+                                <fieldset>
+                                    <legend>검색</legend>
+                                    <div class="box">
+
+
+                                        <div class="check-option">
+                                            <div class="item-checkbox">
+                                                <input type="checkbox" id="searchItemId_t" value="jw"/>
+                                                <label for="searchItemId_t">자료 내 검색</label>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="input-wrap">
+                                            <label>
+                                                <input type="text" id="totalWord" autocomplete="off"
+                                                       placeholder="검색어를 입력하세요" onkeydown="handleEnter(event);"/>
+                                            </label>
+                                            <div class="btn-wrap">
+                                                <a href="javascript:;" class="popup-language"
+                                                   onclick="OpenHanjaInput('totalWord'); return false;">
+                                                    <img src="/resources/contemp/images/header_ico_languages.svg"
+                                                         alt="다국어 입력기" title="다국어 입력기"/>
+                                                </a>
+                                                <script type="text/javascript">
+                                                    $(document).ready(function () {
+                                                        embedIme("totalWord");
+                                                    });
+                                                </script>
+                                                <button onclick="fnSearchResultTotal('totalWord'); return false;">
+                                                    <picture>
+                                                        <source media="(max-width: 767px)"
+                                                                srcset="/resources/contemp/images/header_ico_magnifier_bk.svg">
+                                                        <img src="/resources/contemp/images/header_ico_magnifier.svg"
+                                                             alt="검색" title="검색"/>
+                                                    </picture>
+                                                </button>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="search-type search-type-detail1">
+                            <a href="javascript:;" onclick="return false;">
+                                <span>상세<br/>검색</span>
+                                <div class="bar"><span></span><span></span></div>
+                            </a>
+                        </div>
+
+                        <div class="search-type search-type-detail2">
+                            <a href="javascript:;">
+                                <span>자료<br/>상세검색</span>
+                                <div class="bar"><span></span><span></span></div>
+                            </a>
+                        </div>
+
+                        <div class="search-type search-type-thesaurus">
+                            <a href="javascript:;">
+                                <span>시소러스<br/>검색</span>
+                                <div class="bar"><span></span><span></span></div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 서브메뉴 : 사료목록-->
+                    <div class="submenu submenu-menulist">
+                        <div class="inner">
+                            <div class="scroll-wrap">
+                                <div class="cont">
+
+                                    <div class="cont" id="cont">
+                                        <div class="item-wrap active">
+
+                                            <div class="item">
+                                                <div class="tit">
+												<span>
+													도서
+												</span>
+                                                </div>
+                                                <div class="list">
+                                                    <ul>
+
+                                                        <li>
+
+
+                                                            <a href="/contemp/level.do?itemId=dh">
+                                                                자료대한민국사
+                                                            </a>
+
+
+                                                        </li>
+
+                                                        <li>
+
+
+                                                            <a href="/contemp/level.do?itemId=husa&types=o">
+                                                                미군정기 주한미군사
+                                                            </a>
+
+
+                                                        </li>
+
+                                                        <li>
+
+
+                                                            <a href="/contemp/level.do?itemId=nkhc">
+                                                                북한관계사료집
+                                                            </a>
+
+
+                                                        </li>
+
+                                                        <li>
+
+
+                                                            <a href="/contemp/level.do?itemId=pj">
+                                                                친일파관련문헌
+                                                            </a>
+
+
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="item">
+                                                <div class="tit">
+												<span>
+													문서
+												</span>
+                                                </div>
+                                                <div class="list">
+                                                    <ul>
+
+                                                        <li>
+
+
+                                                            <a href="/item/cons/main.do">
+                                                                헌정사 자료 DB
+                                                            </a>
+
+
+                                                        </li>
+
+                                                        <li>
+
+
+                                                            <a href="/contemp/level.do?itemId=frus&types=o">
+                                                                FRUS 자료
+                                                            </a>
+
+
+                                                        </li>
+
+                                                        <li>
+
+
+                                                            <a href="/item/powr/main.do">
+                                                                포로신문보고서
+                                                            </a>
+
+
+                                                        </li>
+
+                                                        <li>
+
+
+                                                            <a href="/contemp/level.do?itemId=pm">
+                                                                미군정기군정단·군정중대문서
+                                                            </a>
+
+
+                                                        </li>
+
+                                                        <li>
+
+
+                                                            <a href="/contemp/level.do?itemId=an">
+                                                                반민특위조사기록
+                                                            </a>
+
+
+                                                        </li>
+
+                                                        <li>
+
+
+                                                            <a href="/contemp/level.do?itemId=ps">
+                                                                유엔의 한국문제처리에 관한 미국무부의 문서
+                                                            </a>
+
+
+                                                        </li>
+
+                                                        <li>
+
+
+                                                            <a href="/contemp/level.do?itemId=pu">
+                                                                유엔한국임시위원단 관계 문서
+                                                            </a>
+
+
+                                                        </li>
+
+                                                        <li>
+
+
+                                                            <a href="/contemp/level.do?itemId=uthr&types=r">
+                                                                유태하 보고서
+                                                            </a>
+
+
+                                                        </li>
+
+                                                        <li>
+
+
+                                                            <a href="/contemp/level.do?itemId=le">
+                                                                이승만서한철
+                                                            </a>
+
+
+                                                        </li>
+
+                                                        <li>
+
+
+                                                            <a href="/contemp/hihd/level.do">
+                                                                한일회담 미국무부 문서
+                                                            </a>
+
+
+                                                        </li>
+
+                                                        <li>
+
+
+                                                            <a href="/contemp/level.do?itemId=pn">
+                                                                휴전회담회의록
+                                                            </a>
+
+
+                                                        </li>
+
+                                                        <li>
+
+
+                                                            <a href="/contemp/level.do?itemId=swncc">
+                                                                SWNCC 자료
+                                                            </a>
+
+
+                                                        </li>
+
+                                                        <li>
+
+
+                                                            <a href="/contemp/level.do?itemId=fs">
+                                                                해외사료총서
+                                                            </a>
+
+
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="item">
+                                                <div class="tit">
+												<span>
+													관보
+												</span>
+                                                </div>
+                                                <div class="list">
+                                                    <ul>
+
+                                                        <li>
+
+
+                                                            <a href="/contemp/gb/level.do?itemId=gbmg">
+                                                                미군정 관보
+                                                            </a>
+
+
+                                                        </li>
+
+                                                        <li>
+
+
+                                                            <a href="/contemp/gb/level.do?itemId=nkgb">
+                                                                북한 공보
+                                                            </a>
+
+
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="item">
+                                                <div class="tit">
+												<span>
+													신문·잡지
+												</span>
+                                                </div>
+                                                <div class="list">
+                                                    <ul>
+
+                                                        <li>
+
+
+                                                            <a href="/contemp/level.do?itemId=npda">
+                                                                동아일보
+                                                            </a>
+
+
+                                                        </li>
+
+                                                        <li>
+
+
+                                                            <a href="/contemp/level.do?itemId=npfp">
+                                                                자유신문
+                                                            </a>
+
+
+                                                        </li>
+
+                                                        <li>
+
+
+                                                            <a href="/contemp/level.do?itemId=npgn">
+                                                                경남신문계열
+                                                            </a>
+
+
+                                                        </li>
+
+                                                        <li>
+
+
+                                                            <a href="/contemp/level.do?itemId=ma">
+                                                                근현대잡지자료
+                                                            </a>
+
+
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="item">
+                                                <div class="tit">
+												<span>
+													인물·단체
+												</span>
+                                                </div>
+                                                <div class="list">
+                                                    <ul>
+
+                                                        <li>
+
+
+                                                            <a href="/contemp/im/level.do">
+                                                                근현대인물자료
+                                                            </a>
+
+
+                                                        </li>
+
+                                                        <li>
+
+
+                                                            <a href="/contemp/hs/level.do">
+                                                                근현대회사조합자료
+                                                            </a>
+
+
+                                                        </li>
+
+                                                        <li>
+
+
+                                                            <a href="/contemp/jw/level.do">
+                                                                직원록자료
+                                                            </a>
+
+
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 서브메뉴 : 상세검색-->
+                    <div id="detailSearchArea" class="submenu submenu-search-type-detail submenu-search-type-detail1">
+
+
+                        <div class="inner">
+                            <div class="scroll-wrap">
+                                <div class="submenu-title">
+                                    <div class="txt">상세검색</div>
+                                    <div class="util">
+                                        <a href="javascript:;" class="popup-language"
+                                           onclick="OpenHanjaInputDetail(); return false;">
+                                            다국어입력기<img src="/resources/modern/images/header_ico_languages.svg"
+                                                       alt="다국어입력기" title="다국어입력기"/>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="submenu-cont">
+                                    <form id="detailSearchForm" name="detailSearchForm">
+                                        <div class="item-wrap">
+                                            <div class="item">
+                                                <div class="tit">이체자/유의어</div>
+                                                <div class="cont">
+                                                    <div class="type-check">
+                                                        <div class="item-checkbox">
+                                                            <input type="checkbox" id="synonym_d" value="on"/>
+                                                            <label for="synonym_d">유의어 확장</label>
+                                                        </div>
+                                                        <div class="item-checkbox">
+                                                            <input type="checkbox" id="chinessChar_d" value="on"
+                                                                   checked="checked"/>
+                                                            <label for="chinessChar_d">이체자 적용</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="tit">전체검색</div>
+                                                <div class="cont">
+                                                    <div class="type-input">
+                                                        <label>
+                                                            <input type="text" id="totalWord_d" class="detail_input"
+                                                                   autocomplete="off"
+                                                                   placeholder="*연산자: &(and 검색), |(or 검색)"
+                                                                   style="height: 44px;"
+                                                                   onkeydown="detail_handleEnter(event, this.id);"/>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="tit tab10">기사제목</div>
+                                                <div class="cont">
+                                                    <div class="type-input">
+                                                        <label>
+                                                            <input type="text" id="titleWord_d" class="detail_input"
+                                                                   autocomplete="off" placeholder="검색어를 입력하세요"
+                                                                   style="height: 44px;"
+                                                                   onkeydown="detail_handleEnter(event, this.id);"/>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="tit">기사본문</div>
+                                                <div class="cont">
+                                                    <div class="type-select-input">
+                                                        <select id="contentsConjunction_d" title="기사본문 AND/OR 선택">
+                                                            <option value="AND">AND</option>
+                                                            <option value="OR">OR</option>
+                                                        </select>
+                                                        <label>
+                                                            <input type="text" id="contentsWord_d" class="detail_input"
+                                                                   autocomplete="off" placeholder="검색어를 입력하세요"
+                                                                   style="height: 44px;"
+                                                                   onkeydown="detail_handleEnter(event, this.id);"/>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="tit tab10">저자/편자/<br/>발·수신자</div>
+                                                <div class="cont">
+                                                    <div class="type-select-input">
+                                                        <select id="creatorConjunction_d" title="저자/편자/발·수신자 AND/OR 선택">
+                                                            <option value="AND">AND</option>
+                                                            <option value="OR">OR</option>
+                                                        </select>
+                                                        <label>
+                                                            <input type="text" id="creatorWord_d" class="detail_input"
+                                                                   autocomplete="off" placeholder="검색어를 입력하세요"
+                                                                   style="height: 44px;"
+                                                                   onkeydown="detail_handleEnter(event, this.id);"/>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="tit">대상기간</div>
+                                                <div class="cont" style="width: calc(100% - 128px);">
+                                                    <div class="type-input2">
+                                                        <label>
+                                                            <input type="text" id="startDate_year"
+                                                                   class="detail_input onlyNumber" maxlength="4"
+                                                                   autocomplete="off" placeholder="YYYY"/>
+                                                        </label>년
+                                                        <label>
+                                                            <input type="text" id="startDate_month"
+                                                                   class="detail_input onlyNumber" maxlength="2"
+                                                                   autocomplete="off" placeholder="MM"/>
+                                                        </label>월
+                                                        <label>
+                                                            <input type="text" id="startDate_day"
+                                                                   class="detail_input onlyNumber" maxlength="2"
+                                                                   autocomplete="off" placeholder="DD"/>
+                                                        </label>일
+                                                        <span style="margin: 0 5px;">~</span>
+                                                        <label>
+                                                            <input type="text" id="endDate_year"
+                                                                   class="detail_input onlyNumber" maxlength="4"
+                                                                   autocomplete="off" placeholder="YYYY"/>
+                                                        </label>년
+                                                        <label>
+                                                            <input type="text" id="endDate_month"
+                                                                   class="detail_input onlyNumber" maxlength="2"
+                                                                   autocomplete="off" placeholder="MM"/>
+                                                        </label>월
+                                                        <label>
+                                                            <input type="text" id="endDate_day"
+                                                                   class="detail_input onlyNumber" maxlength="2"
+                                                                   autocomplete="off" placeholder="DD"/>
+                                                        </label>일
+                                                    </div>
+                                                </div>
+                                                <div class="tit">분류</div>
+                                                <div class="cont">
+                                                    <div class="type-select">
+                                                        <select id="subjectItemIds_d" title="분류 선택"
+                                                                onchange="fnSelectSubject(this); return false;">
+                                                            <option value="">전체</option>
+
+
+                                                            <option value="dh;husa;nkhc;pj">
+                                                                도서
+                                                            </option>
+
+
+                                                            <option value="cons;frus;powr;pm;an;ps;pu;uthr;le;hihd;pn;swncc;fs">
+                                                                문서
+                                                            </option>
+
+
+                                                            <option value="gbmg;nkgb">
+                                                                관보
+                                                            </option>
+
+
+                                                            <option value="npda;npfp;npgn;ma">
+                                                                신문·잡지
+                                                            </option>
+
+
+                                                            <option value="im;hs;jw">
+                                                                인물·단체
+                                                            </option>
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="tit tab10">자료</div>
+                                                <div class="cont">
+                                                    <div class="type-input-button">
+                                                        <label>
+                                                            <input type="text" id="searchItemNames_d"
+                                                                   readonly="readonly" placeholder="자료를 선택하세요."/>
+                                                            <input type="hidden" id="searchItemIds_d"/>
+                                                            <!-- 01.15 placeholder="자료를 선택하세요."  삭제 -->
+                                                        </label>
+                                                        <button type="button" class="button btn-lp-data-select">
+                                                            목록보기<img src="/resources/modern/images/ico_circle_plus.svg"
+                                                                     alt="+"/>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <script type="text/javascript">
+                                        $(document).ready(function () {
+                                            embedIme("totalWord_d");
+                                            embedIme("titleWord_d");
+                                            embedIme("contentsWord_d");
+                                            embedIme("creatorWord_d");
+                                        });
+                                    </script>
+                                    <div class="btn-wrap">
+                                        <button type="button" class="submit"
+                                                onclick="fnSearchResultDetail(); return false;">검색
+                                        </button>
+                                        <button type="button" class="reset"
+                                                onclick="fnInitDetailSearchForm(); return false;">다시 쓰기
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script type="text/javascript">
+
+                            // 분류 선택
+                            function fnSelectSubject(obj) {
+                                var subjectItemIds = $(obj).val();
+                                if (subjectItemIds) {
+                                    var subjectItemIdArr = subjectItemIds.split(";");
+                                    $("#detail_search_item_ul li").each(function (index, element) {
+                                        $(this).hide();
+                                    });
+                                    $.each(subjectItemIdArr, function (index, element) {
+                                        $("#detail_search_item_li_" + element).show();
+                                    });
+                                } else {
+                                    $("#detail_search_item_ul li").each(function (index, element) {
+                                        $(this).show();
+                                    });
+                                }
+                            }
+
+                        </script>
+
+                    </div>
+
+
+                    <!-- 서브메뉴 : 자료상세검색 -->
+                    <div id="itemDetailSearchArea"
+                         class="submenu submenu-search-type-detail submenu-search-type-detail2">
+
+                    </div>
+
+
+                    <!-- 서브메뉴 : 시소러스검색 -->
+                    <div class="submenu submenu-search-type-thesaurus">
+                        <div class="inner">
+                            <div class="scroll-wrap">
+                                <div class="input-box">
+                                    <label><input type="text" id="thesaurusKeyword"/></label>
+                                    <button onclick="fnSearchThesaurusResult('thesaurusKeyword'); return false;">검색
+                                    </button>
+                                </div>
+                                <div class="guide">본 사이트의 시소러스 검색은 한국역사용어시소러스 검색엔진을 이용합니다.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- 모바일기타메뉴서브메뉴 -->
+            <div class="menu2-submenu-mob" id="menu2-submenu-mobile">
+                <ul>
+                    <li><a href="javascript:;" class="popup-info">사이트소개</a></li> <!-- 01.15  class="siteInfo" 삭제 -->
+                    <!-- <li><a href="javascript:;" class="helfInfo">도움말</a></li> -->
+                    <li><a href="/contemp/notice/noticeList.do">공지사항</a></li>
+                    <li><a href="https://www.history.go.kr/" target="_blank">국사편찬위원회<img
+                            src="/resources/contemp/images/ico_linkSite.svg" alt="국사편찬위원회 바로가기"
+                            title="국사편찬위원회 바로가기"/></a></li>
+                    <li><a href="/" target="_blank">한국사데이터베이스<img src="/resources/contemp/images/ico_linkSite.svg"
+                                                                  alt="한국사데이터베이스 바로가기" title="한국사데이터베이스 바로가기"/></a></li>
+                </ul>
+            </div>
+
+        </div>
+    </header>
+
+
+    <form id="totalSearchForm" name="totalSearchForm" method="post" action="/contemp/search/searchTotalResult.do">
+        <input type="hidden" name="pageIndex" value="1"/>
+        <input type="hidden" name="pageUnit" value="20"/>
+        <input type="hidden" name="pageSize" value="1"/>
+        <input type="hidden" name="orderColumn" value="levelId"/>
+        <input type="hidden" name="orderDir" value="ASC"/>
+
+        <input type="hidden" name="synonym" value="off"/>
+        <input type="hidden" name="chinessChar" value="on"/>
+        <input type="hidden" name="wordImages" value=''/>
+        <input type="hidden" name="totalWord" value=""/>
+        <input type="hidden" name="titleWord" value=""/>
+        <input type="hidden" name="titleConjunction" value="AND"/>
+        <input type="hidden" name="contentsWord" value=""/>
+        <input type="hidden" name="contentsConjunction" value="AND"/>
+        <input type="hidden" name="creatorWord" value=""/>
+        <input type="hidden" name="creatorConjunction" value="AND"/>
+        <input type="hidden" name="startDate" value=""/>
+        <input type="hidden" name="endDate" value=""/>
+
+        <input type="hidden" name="searchItemIds" value=""/>
+    </form>
+
+    <form id="itemSearchForm" name="itemSearchForm" method="post" action="/contemp/search/searchResultList.do">
+        <input type="hidden" name="pageIndex" value="1"/>
+        <input type="hidden" name="pageUnit" value="20"/>
+        <input type="hidden" name="pageSize" value="1"/>
+        <input type="hidden" name="orderColumn" value="levelId"/>
+        <input type="hidden" name="orderDir" value="ASC"/>
+
+        <input type="hidden" name="synonym" value="off"/>
+        <input type="hidden" name="chinessChar" value="on"/>
+        <input type="hidden" name="wordImages" value=''/>
+        <input type="hidden" name="totalWord" value=""/>
+        <input type="hidden" name="titleWord" value=""/>
+        <input type="hidden" name="titleConjunction" value="AND"/>
+        <input type="hidden" name="contentsWord" value=""/>
+        <input type="hidden" name="contentsConjunction" value="AND"/>
+        <input type="hidden" name="creatorWord" value=""/>
+        <input type="hidden" name="creatorConjunction" value="AND"/>
+        <input type="hidden" name="startDate" value=""/>
+        <input type="hidden" name="endDate" value=""/>
+
+        <input type="hidden" name="itemOnlyYn" value="N"/>
+        <input type="hidden" name="searchItemIds" value=""/>
+        <input type="hidden" name="searchItemId" value=""/>
+        <input type="hidden" name="searchLevel1Id" value=""/>
+        <input type="hidden" name="searchTypes" value=""/>
+        <input type="hidden" name="searchSujectClass1" value=""/>
+        <input type="hidden" name="itemSearchCount" value=""/>
+
+
+    </form>
+
+    <form id="thesaurusForm" name="thesaurusForm" method="post" action="/contemp/search/thesaurusResult.do">
+        <input type="hidden" id="searchword" name="searchword" value=""/>
+        <input type="hidden" id="oid" name="oid"/>
+    </form>
+
+    <script type="text/javascript" src="/resources/webime/js/search.js"></script>
+    <script type="text/javascript" src="/resources/webime/js/common.js"></script>
+    <!-- <script type="text/javascript" src="/resources/webime/js/detailSearch.js"></script>
+<script type="text/javascript" src="/resources/webime/js/detailCommon.js"></script> -->
+    <script type="text/javascript" src="/resources/webime/js/tiny_mce_src.js?ver=1.1"></script>
+    <script type="text/javascript" src="/resources/webime/js/jquery.blockUI.js"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            // 숫자만 입력
+            $(".onlyNumber").on("keyup", function () {
+                if (!(event.keyCode >= 37 && event.keyCode <= 40)) {
+                    $(this).val($(this).val().replace(/[^0-9]/g, ''));
+                }
+            }).on("blur", function () {
+                if (!(event.keyCode >= 37 && event.keyCode <= 40)) {
+                    $(this).val($(this).val().replace(/[^0-9]/g, ''));
+                }
+            });
+
+            // 통합 검색어 input 엔터 이벤트
+            $("#totalWord").on("keypress", function (e) {
+                if (e.keyCode == 13) {
+                    $(this).val($.trim($(this).val()));
+                    if ($.trim($(this).val()) != "") {
+                        e.preventDefault();
+                        fnSearchResultTotal($(this).attr("id"));
+                    } else {
+                        alert("검색어를 입력해주세요.");
+                        e.preventDefault();
+                    }
+                }
+            });
+
+            // 상세 검색어 input 엔터 이벤트
+            $(".detail_input").on("keypress", function (e) {
+                if (e.keyCode == 13) {
+                    if ($.trim($(this).val()) != "") {
+                        e.preventDefault();
+                        fnSearchResultDetail();
+                    } else {
+                        alert("검색어를 입력해주세요.");
+                        e.preventDefault();
+                    }
+                }
+            });
+
+            // 시소러스 검색어 input 엔터 이벤트
+            if ($("#thesaurusKeyword").length > 0) {
+                $("#thesaurusKeyword").on("keypress", function (e) {
+                    if (e.keyCode == 13) {
+                        if ($.trim($(this).val()) != "") {
+                            e.preventDefault();
+                            fnSearchThesaurusResult($(this).attr("id"));
+                        }
+                    }
+                });
+            }
+            // 시소러스 검색결과 검색어 input 엔터 이벤트
+            if ($("#thesaurusKeyword_r").length > 0) {
+                $("#thesaurusKeyword_r").on("keypress", function (e) {
+                    if (e.keyCode == 13) {
+                        if ($.trim($(this).val()) != "") {
+                            e.preventDefault();
+                            fnSearchThesaurusResult($(this).attr("id"));
+                        }
+                    }
+                });
+            }
+
+            $(".newchar").each(function () {
+                //console.log("" + $(this).parent().prop('tagName'))
+                if ("li" !== $(this).parent().prop('tagName') && "LI" !== $(this).parent().prop('tagName')) {
+                    $(this).css("vertical-align", "middle");
+                    $(this).css("width", "18px");
+                }
+            });
+        });
+
+        // 통합 검색어 Enter키 검색
+        function handleEnter(e) {	// 검색입력 이벤트 체크
+            if (e.keyCode == 0 || e.keyCode == 13) {
+                fnSearchResultTotal("totalWord");
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        // 상세 검색어 Enter키 검색
+        function detail_handleEnter(e, inputId) {	// 검색입력 이벤트 체크
+            if (e.keyCode == 0 || e.keyCode == 13) {
+                var searchTerm = getImevar(inputId);
+                if ($.trim(searchTerm)) {
+                    fnSearchResultDetail();
+                } else {
+                    alert("검색어를 입력해주세요.");
+                }
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        // 자료 상세 검색어 Enter키 검색
+        function detailItem_handleEnter(e, inputId) {	// 검색입력 이벤트 체크
+            if (e.keyCode == 0 || e.keyCode == 13) {
+                var searchTerm = getImevar(inputId);
+                if ($.trim(searchTerm)) {
+                    fnSearchResultDetailItem();
+                } else {
+                    alert("검색어를 입력해주세요.");
+                }
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        // 통합 검색
+        function fnSearchResultTotal(textId) {
+            if (textId) {
+                var searchTerm = getImevar(textId);
+                $("#" + textId).val(searchTerm);
+
+                var reSearchInResultYn = "N";	// 결과 내 검색 여부
+                var searchItemOnlyYn = "N";		// 자료 내 검색 여부
+
+                if ($("#reSearchInResultYn").length && $("#reSearchInResultYn").is(":checked")) {
+                    reSearchInResultYn = "Y";
+                } else if ($("#searchItemId_t").length && $("#searchItemId_t").is(":checked")) {
+                    searchItemOnlyYn = "Y";
+
+                    // 자료 내 검색인 경우 아이템 검색 조건 초기화
+                    fnInitItemSearchForm();
+                } else {
+                    // 결과 내 검색이 아닌 경우 통합 검색 조건 초기화
+                    fnInitTotalSearchForm();
+                }
+
+                var keyword = $.trim($("#" + textId).val());
+                keyword = removeSpecialChar(keyword);
+                if (keyword) {
+                    var wordImages = getImevarHTML(textId, "").replace(/\'/gi, "\"");
+                    var reg1 = /[\S] [/][wn][0-9]{1,7} [\S]/ig;	// 정상
+                    var reg2 = /[/][wn] /ig;					// 비정상
+
+                    var check1 = reg1.test(wordImages);
+                    var check2 = reg2.test(wordImages);
+                    if (!check1 && check2) {
+                        alert("인접검색 방식이 잘못 되었습니다!");
+                        return;
+                    } else {
+                        var totalWord = keyword;
+
+                        if (reSearchInResultYn == "Y" || searchItemOnlyYn == "Y") {	// 결과 내 검색 또는 자료 내 검색
+                            if ($('#itemSearchForm input[name="wordImages"]').val() != "") {
+                                wordImages = $('#itemSearchForm input[name="wordImages"]').val() + "&nbsp;AND&nbsp;" + wordImages;
+                            }
+                            if ($('#itemSearchForm input[name="totalWord"]').val() != "") {
+                                totalWord = $('#itemSearchForm input[name="totalWord"]').val() + " AND " + totalWord;
+                            }
+                            $('#itemSearchForm input[name="wordImages"]').val(wordImages);
+                            $('#itemSearchForm input[name="totalWord"]').val(totalWord);
+                        } else {
+                            $('#totalSearchForm input[name="wordImages"]').val(wordImages);
+                            $('#totalSearchForm input[name="totalWord"]').val(totalWord);
+                        }
+                    }
+                } else {
+                    alert("검색어를 입력해주세요.");
+                    return;
+                }
+
+                if (reSearchInResultYn == "Y") {		// 결과 내 검색
+                    $("#itemSearchForm").submit();
+                } else if (searchItemOnlyYn == "Y") {	// 자료 내 검색
+                    $('#itemSearchForm input[name="itemOnlyYn"]').val("Y");
+
+                    var searchItemId_t = $("#searchItemId_t").val();
+                    $('#itemSearchForm input[name="searchItemIds"]').val(searchItemId_t);
+                    $('#itemSearchForm input[name="searchItemId"]').val(searchItemId_t);
+
+                    $("#itemSearchForm").submit();
+                } else {
+                    $("#totalSearchForm").submit();
+                }
+            } else {
+                $("#totalSearchForm").submit();
+            }
+        }
+
+        // 통합 검색 초기화
+        function fnInitTotalSearchForm() {
+            $('#totalSearchForm input[name="pageIndex"]').val("1");
+            $('#totalSearchForm input[name="pageUnit"]').val("20");
+            $('#totalSearchForm input[name="pageSize"]').val("1");
+            $('#totalSearchForm input[name="orderColumn"]').val("levelId");
+            $('#totalSearchForm input[name="orderDir"]').val("ASC");
+            $('#totalSearchForm input[name="synonym"]').val("off");
+            $('#totalSearchForm input[name="chinessChar"]').val("on");
+            $('#totalSearchForm input[name="wordImages"]').val("");
+            $('#totalSearchForm input[name="totalWord"]').val("");
+            $('#totalSearchForm input[name="titleWord"]').val("");
+            $('#totalSearchForm input[name="titleConjunction"]').val("AND");
+            $('#totalSearchForm input[name="contentsWord"]').val("");
+            $('#totalSearchForm input[name="contentsConjunction"]').val("AND");
+            $('#totalSearchForm input[name="creatorWord"]').val("");
+            $('#totalSearchForm input[name="creatorConjunction"]').val("AND");
+            $('#totalSearchForm input[name="startDate"]').val("");
+            $('#totalSearchForm input[name="endDate"]').val("");
+
+            $('#totalSearchForm input[name="searchItemIds"]').val("");
+        }
+
+        // 아이템 검색 초기화
+        function fnInitItemSearchForm() {
+            $('#itemSearchForm input[name="pageIndex"]').val("1");
+            $('#itemSearchForm input[name="pageUnit"]').val("20");
+            $('#itemSearchForm input[name="pageSize"]').val("1");
+            $('#itemSearchForm input[name="orderColumn"]').val("levelId");
+            $('#itemSearchForm input[name="orderDir"]').val("ASC");
+            $('#itemSearchForm input[name="synonym"]').val("off");
+            $('#itemSearchForm input[name="chinessChar"]').val("on");
+            $('#itemSearchForm input[name="wordImages"]').val("");
+            $('#itemSearchForm input[name="totalWord"]').val("");
+            $('#itemSearchForm input[name="titleWord"]').val("");
+            $('#itemSearchForm input[name="titleConjunction"]').val("AND");
+            $('#itemSearchForm input[name="contentsWord"]').val("");
+            $('#itemSearchForm input[name="contentsConjunction"]').val("AND");
+            $('#itemSearchForm input[name="creatorWord"]').val("");
+            $('#itemSearchForm input[name="creatorConjunction"]').val("AND");
+            $('#itemSearchForm input[name="startDate"]').val("");
+            $('#itemSearchForm input[name="endDate"]').val("");
+
+            $('#itemSearchForm input[name="itemOnlyYn"]').val("");
+            $('#itemSearchForm input[name="searchItemIds"]').val("");
+            $('#itemSearchForm input[name="searchItemId"]').val("");
+            $('#itemSearchForm input[name="searchLevel1Id"]').val("");
+            $('#itemSearchForm input[name="searchTypes"]').val("");
+            $('#itemSearchForm input[name="searchSujectClass1"]').val("");
+
+            // 기타 검색 조건 초기화
+            removeAllSearchConditionSet($("#itemSearchForm"));
+        }
+
+        // 상세 검색
+        function fnSearchResultDetail() {
+            var inputCount = 0;
+            $("input.detail_input").each(function () {
+                var searchTerm = getImevar(this.id);
+                if ($.trim(searchTerm)) {
+                    inputCount++;
+                }
+            });
+            if (inputCount <= 0) {
+                alert("하나 이상의 검색어를 입력해주세요.");
+                $("#totalWord_d_ifr").contents().find("#tinymce").focus();
+                return;
+            }
+
+            // 통합 검색 초기화
+            fnInitTotalSearchForm();
+
+            if ($("#synonym_d").is(":checked")) {
+                $('#totalSearchForm input[name="synonym"]').val("on");
+            } else {
+                $('#totalSearchForm input[name="synonym"]').val("off");
+            }
+            if ($("#chinessChar_d").is(":checked")) {
+                $('#totalSearchForm input[name="chinessChar"]').val("on");
+            } else {
+                $('#totalSearchForm input[name="chinessChar"]').val("off");
+            }
+
+            var searchQueryHtmlTag = "";	// 신출자이미지 변수
+
+            var reg1 = /[\S] [/][wn][0-9]{1,7} [\S]/ig;	// 정상
+            var reg2 = /[/][wn] /ig;					// 비정상
+
+            var totalWord_d = getImevar("totalWord_d");
+            totalWord_d = removeSpecialChar(totalWord_d);
+            if ($.trim(totalWord_d)) {	// 전체검색 입력란에 입력된 내용
+                var check1 = reg1.test(totalWord_d);
+                var check2 = reg2.test(totalWord_d);
+                if (!check1 && check2) {
+                    alert("인접검색 방식이 잘못 되었습니다!");
+                    return;
+                } else {
+                    var keyword = totalWord_d;
+                    keyword = removeSpecialChar(keyword);
+                    if ($.trim(keyword)) {
+                        searchQueryHtmlTag += getImevarHTML("totalWord_d", "").replace(/\'/gi, "\"") + "&nbsp;";
+                        $('#totalSearchForm input[name="totalWord"]').val(keyword);
+                    } else {
+                        alert("특수문자를 제외한 검색단어가 없습니다. 하나이상의 검색어를 입력해주세요.");
+                        //$("#totalWord_d").focus();
+                        $("#totalWord_d_ifr").contents().find("#tinymce").focus();
+                        return;
+                    }
+                }
+            }
+
+            var titleWord_d = getImevar("titleWord_d");
+            titleWord_d = removeSpecialChar(titleWord_d);
+            if ($.trim(titleWord_d)) {
+                var check1 = reg1.test(titleWord_d);
+                var check2 = reg2.test(titleWord_d);
+                if (!check1 && check2) {
+                    alert("인접검색 방식이 잘못 되었습니다!");
+                    return;
+                } else {
+                    var keyword = titleWord_d;
+                    keyword = removeSpecialChar(keyword);
+                    if ($.trim(keyword)) {
+                        searchQueryHtmlTag += getImevarHTML("titleWord_d", "").replace(/\'/gi, "\"") + "&nbsp;";
+                        $('#totalSearchForm input[name="titleWord"]').val(keyword);
+                    } else {
+                        alert("특수문자를 제외한 검색단어가 없습니다. 하나이상의 검색어를 입력해주세요.");
+                        //$("#titleWord_d").focus();
+                        $("#titleWord_d_ifr").contents().find("#tinymce").focus();
+                        return;
+                    }
+                }
+            }
+
+            var contentsWord_d = getImevar("contentsWord_d");
+            contentsWord_d = removeSpecialChar(contentsWord_d);
+            if ($.trim(contentsWord_d)) {
+                var check1 = reg1.test(contentsWord_d);
+                var check2 = reg2.test(contentsWord_d);
+                if (!check1 && check2) {
+                    alert("인접검색 방식이 잘못 되었습니다!");
+                    return;
+                } else {
+                    var keyword = contentsWord_d;
+                    keyword = removeSpecialChar(keyword);
+                    if ($.trim(keyword)) {
+                        var contentsConjunction_d = $("#contentsConjunction_d option:selected").val();
+                        $('#totalSearchForm input[name="contentsConjunction"]').val(contentsConjunction_d);
+
+                        searchQueryHtmlTag += getImevarHTML("contentsWord_d", "").replace(/\'/gi, "\"") + "&nbsp;";
+                        $('#totalSearchForm input[name="contentsWord"]').val(keyword);
+                    } else {
+                        alert("특수문자를 제외한 검색단어가 없습니다. 하나이상의 검색어를 입력해주세요.");
+                        //$("#contentsWord_d").focus();
+                        $("#contentsWord_d_ifr").contents().find("#tinymce").focus();
+                        return;
+                    }
+                }
+            }
+
+            var creatorWord_d = getImevar("creatorWord_d");
+            creatorWord_d = removeSpecialChar(creatorWord_d);
+            if ($.trim(creatorWord_d)) {
+                var check1 = reg1.test(creatorWord_d);
+                var check2 = reg2.test(creatorWord_d);
+                if (check1 || (!check1 && check2)) {
+                    alert("'저자/편자/발·수신자'항목에서는 인접 연산자를 통한 검색이 지원되지 않습니다.");
+                    return;
+                } else {
+                    var keyword = creatorWord_d;
+                    keyword = removeSpecialChar(keyword);
+                    if ($.trim(keyword)) {
+                        var creatorConjunction_d = $("#creatorConjunction_d option:selected").val();
+                        $('#totalSearchForm input[name="creatorConjunction"]').val(creatorConjunction_d);
+
+                        searchQueryHtmlTag += getImevarHTML("creatorWord_d", "").replace(/\'/gi, "\"") + "&nbsp;";
+                        $('#totalSearchForm input[name="creatorWord"]').val(keyword);
+                    } else {
+                        alert("특수문자를 제외한 검색단어가 없습니다. 하나이상의 검색어를 입력해주세요.");
+                        //$("#creatorWord_d").focus();
+                        $("#creatorWord_d_ifr").contents().find("#tinymce").focus();
+                        return;
+                    }
+                }
+            }
+
+            if (($("#startDate_year").val() || $("#startDate_month").val() || $("#startDate_day").val())
+                && ($("#endDate_year").val() || $("#endDate_month").val() || $("#endDate_day").val())) {
+                var startYear = $("#startDate_year").val();
+                var startMon = $("#startDate_month").val();
+                var startDay = $("#startDate_day").val();
+                var startDate = searchFormatDate(startYear, startMon, startDay, "0000", "000");
+
+                var endYear = $("#endDate_year").val();
+                var endMon = $("#endDate_month").val();
+                var endDay = $("#endDate_day").val();
+                var endDate = searchFormatDate(endYear, endMon, endDay, "9999", "999");
+
+                if (startDate > endDate) {
+                    alert("대상기간이 올바르지 않습니다. 다시 입력해주세요.");
+                    return;
+                }
+
+                var dateKeyword = startDate + " ~ " + endDate;
+                searchQueryHtmlTag += dateKeyword + "&nbsp;";
+
+                $('#totalSearchForm input[name="startDate"]').val(startDate);
+                $('#totalSearchForm input[name="endDate"]').val(endDate);
+            } else if ($("#startDate_year").val() || $("#startDate_month").val() || $("#startDate_day").val()) {
+                var startYear = $("#startDate_year").val();
+                var startMon = $("#startDate_month").val();
+                var startDay = $("#startDate_day").val();
+                var startDate = searchFormatDate(startYear, startMon, startDay, "0000", "000");
+
+                searchQueryHtmlTag += startDate + "&nbsp;";
+                $('#totalSearchForm input[name="startDate"]').val(startDate);
+            } else if ($("#endDate_year").val() || $("#endDate_month").val() || $("#endDate_day").val()) {
+                var endYear = $("#endDate_year").val();
+                var endMon = $("#endDate_month").val();
+                var endDay = $("#endDate_day").val();
+                var endDate = searchFormatDate(endYear, endMon, endDay, "9999", "999");
+
+                searchQueryHtmlTag += endDate + "&nbsp;";
+                $('#totalSearchForm input[name="endDate"]').val(endDate);
+            }
+
+            $('#totalSearchForm input[name="wordImages"]').val(searchQueryHtmlTag);
+
+            // 검색  아이템아이디들
+            var searchItemIds = "";
+            var subjectItemIds_d = $("#subjectItemIds_d option:selected").val();	// 분류
+            var searchItemIds_d = $("#searchItemIds_d").val();						// 자료 선택
+            if (subjectItemIds_d && !searchItemIds_d) {
+                searchItemIds = subjectItemIds_d;
+            } else if (!subjectItemIds_d && searchItemIds_d) {
+                searchItemIds = searchItemIds_d;
+            } else if (subjectItemIds_d && searchItemIds_d) {
+                var subjectItemIds_dArr = subjectItemIds_d.split(";");
+                var searchItemIds_dArr = searchItemIds_d.split(";");
+
+                // 분류와 자료 선택이 AND일 경우
+                $.each(subjectItemIds_dArr, function (index, value) {
+                    $.each(searchItemIds_dArr, function (index2, value2) {
+                        if (value == value2) {
+                            if (searchItemIds) {
+                                searchItemIds += ";";
+                            }
+                            searchItemIds += value;
+                            return false;
+                        }
+                    });
+                });
+                if (searchItemIds === "") {
+                    searchItemIds = "noItem";
+                }
+                /* // 분류와 자료 선택이 OR일 경우
+		searchItemIds = subjectItemIds_d;
+		$.each(searchItemIds_dArr, function(index, value) {
+			if ($.inArray(value, subjectItemIds_dArr) === -1) {
+				searchItemIds += ";" + value;
+			}
+		}); */
+            }
+            //console.log("searchItemIds=" + searchItemIds);
+            $('#totalSearchForm input[name="searchItemIds"]').val(searchItemIds);
+
+            $("#totalSearchForm").submit();
+        }
+
+        // 상세 검색 초기화
+        function fnInitDetailSearchForm() {
+            document.detailSearchForm.reset();
+
+            $("#synonym_d").prop("checked", false);
+            $("#chinessChar_d").prop("checked", true);
+            $("#totalWord_d").val("");
+            $("#titleWord_d").val("");
+            $("#contentsConjunction_d").val("AND").prop("selected", true);
+            $("#contentsWord_d").val("");
+            $("#creatorConjunction_d").val("AND").prop("selected", true);
+            $("#creatorWord_d").val("");
+            $("#startDate_year").val("");
+            $("#startDate_month").val("");
+            $("#startDate_day").val("");
+            $("#endDate_year").val("");
+            $("#endDate_month").val("");
+            $("#endDate_day").val("");
+
+            $("#subjectItemIds_d").val("").prop("selected", true);
+            $("#searchItemIds_d").val("");
+            $("#searchItemNames_d").val("");
+        }
+
+        // 아이템 검색으로 이동
+        function fnGoSearchResultItem(itemId) {
+            $('#itemSearchForm input[name="searchItemId"]').val(itemId);
+
+            $('#itemSearchForm input[name="pageIndex"]').val("1");
+            $('#itemSearchForm input[name="pageUnit"]').val("20");
+            $('#itemSearchForm input[name="pageSize"]').val("1");
+            $('#itemSearchForm input[name="orderColumn"]').val("levelId");
+            $('#itemSearchForm input[name="orderDir"]').val("ASC");
+
+            $('#itemSearchForm input[name="searchTypes"]').val("");
+            $('#itemSearchForm input[name="searchSujectClass1"]').val("");
+
+            if (itemId == "cons") {	// 헌정사 자료 DB(cons)
+                $("#itemSearchForm").attr("action", "/search/cons/searchResultList.do").attr("target", "_blank");
+            } else if (itemId == 'powr') {	// 포로신문보고서(powr)
+                $("#itemSearchForm").attr("action", "/search/powr/searchResultList.do").attr("target", "_blank");
+            }
+
+            $("#itemSearchForm").submit();
+
+            if (itemId == "cons" || itemId == 'powr') {	// 헌정사 자료 DB(cons), 포로신문보고서(powr)
+                $("#itemSearchForm").attr("action", "/contemp/search/searchResultList.do").removeAttr("target");
+            }
+        }
+
+        // 아이템 검색 목록으로 이동
+        function fnGoItemSearchList(itemId) {
+            $('#itemSearchForm input[name="searchItemId"]').val(itemId);
+            $("#itemSearchForm").submit();
+        }
+
+        // 아이템레벨 화면으로 이동
+        function fnGoItemLevel(itemId, levelId, position) {
+            /* if ($('#itemSearchForm input[name="levelId"]').length) {
+		$('#itemSearchForm input[name="levelId"]').remove();
+	}
+	var hiddenLevelId = $('<input type="hidden" name="levelId" value="' + levelId + '" />');
+	$("#itemSearchForm").append(hiddenLevelId); */
+
+            if ($('#itemSearchForm input[name="position"]').length) {
+                $('#itemSearchForm input[name="position"]').remove();
+            }
+            var hiddenPosition = $('<input type="hidden" name="position" value="' + position + '" />');
+            $("#itemSearchForm").append(hiddenPosition);
+
+            var detailUrl = "";
+            if (itemId == "im") {			// 근현대인물자료(im)
+                detailUrl = "/contemp/im/detail.do";
+            } else if (itemId == "hs") {	// 근현대회사조합자료(hs)
+                detailUrl = "/contemp/hs/detail.do";
+            } else if (itemId == "jw") {	// 직원록자료(jw)
+                detailUrl = "/contemp/jw/level.do";
+            } else if (itemId == "nkgb" || itemId == "gbmg") {	// 북한 공보(nkgb), 미군정 관보(gbmg)
+                detailUrl = "/contemp/gb/level.do";
+            } else if (itemId == "hihd") {	// 한일회담 미국무부 문서(hihd)
+                detailUrl = "/contemp/hihd/level.do";
+            } else {
+                detailUrl = "/contemp/level.do";
+            }
+            //console.log("detailUrl=" + detailUrl);
+
+            $('#itemSearchForm input[name="orderColumn"]').val($("#orderColumn_top").val());
+
+            $("#itemSearchForm").attr("action", detailUrl).submit();
+        }
+
+    </script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            // 자료상세검색 토글
+            $('header .header-nav .search-type-detail2 a').on('click', function () {
+                $('header .header-nav .menu-list a').removeClass('open');
+                $('header .header-nav .search-type-detail1 a').removeClass('open');
+                $('header .header-nav .search-type-thesaurus a').removeClass('open');
+
+                if ($(this).hasClass('open')) {
+                    $(this).removeClass('open');
+                    $('header .submenu-search-type-detail2').removeClass('active');
+                    $('.dimmed-tr').removeClass('active');
+                } else {
+                    $(this).addClass('open');
+
+                    var $childDiv = $("#itemDetailSearchArea").children("div.inner")
+                    //console.log("$childDiv.length=" + $childDiv.length);
+                    if ($childDiv.length == 0) {
+                        $("#itemDetailSearchArea").empty();
+
+                        // 자료 상세 검색 영역 가져오기
+                        $.ajax({
+                            url: "/search/getItemDetailSearchAreaAjax.do",
+                            type: "get",
+                            data: {
+                                "itemId": $("#searchItemId_t").val()
+                            },
+                            dataType: "html",
+                            success: function (data) {
+                                $("#itemDetailSearchArea").html(data);
+
+                                $('header .submenu-search-type-detail2').addClass('active').siblings('.submenu').removeClass('active');
+                                $('.dimmed-tr').addClass('active');
+                            },
+                            error: function (xhr, status, error) {
+                                alert("자료 상세 검색 영역 가져오기 에러!");
+                            }
+                        });
+                    } else {
+                        $('header .submenu-search-type-detail2').addClass('active').siblings('.submenu').removeClass('active');
+                        $('.dimmed-tr').addClass('active');
+                    }
+                }
+            });
+        });
+
+        // 자료 선택
+        function fnSelectSearchItem(itemId, itemName) {
+            //console.log("fnSelectSearchItem itemId=" + itemId + ", itemName=" + itemName);
+            if (itemId) {
+                var selectedSearchItemIds = $("#searchItemIds_d").val();
+                //console.log("fnSelectSearchItem selectedSearchItemIds=" + selectedSearchItemIds);
+
+                var isAdd = true;
+                if (selectedSearchItemIds) {
+                    var selectedSearchItemIdArr = selectedSearchItemIds.split(";");
+                    $.each(selectedSearchItemIdArr, function (index, value) {
+                        if (value == itemId) {
+                            isAdd = false;
+                            return false;
+                        }
+                    });
+                }
+                if (isAdd) {
+                    var selectedSearchItemNames = $("#searchItemNames_d").val();
+                    if (selectedSearchItemIds) {
+                        selectedSearchItemIds += ";";
+                        selectedSearchItemNames += ";";
+                    }
+                    selectedSearchItemIds += itemId;
+                    selectedSearchItemNames += itemName;
+
+                    $("#searchItemIds_d").val(selectedSearchItemIds);
+                    $("#searchItemNames_d").val(selectedSearchItemNames);
+                }
+            }
+
+            $("#dataCloseBtn").trigger("click");
+        }
+
+        // 시소러스 검색
+        function fnSearchThesaurusResult(textId) {
+            if (textId) {
+                var searchword = $.trim($("#" + textId).val());
+                if (searchword) {
+                    $('#thesaurusForm input[name="searchword"]').val(searchword);
+                    $("#thesaurusForm").submit();
+                } else {
+                    alert("검색어를 입력해주세요.");
+                    $("#" + textId).focus();
+                    return false;
+                }
+            } else {
+                $("#thesaurusForm").submit();
+            }
+        }
+
+        function getContextPath() {
+            return '';
+        }
+
+    </script>
+
+
+    <!-- //header -->
+
+    <!-- container -->
+
+
+    <div id="container">
+        <div id="content">
+            <div class="content-top">
+                <div class="box-wrap">
+                    <ul class="nav">
+                        <li>
+                            <a href="/contemp/main.do"><img src="/resources/contemp/images/ico_bc_home.svg" alt="홈"
+                                                            title="홈"/></a>
+                        </li>
+                        <li>
+                            <a href="/contemp/jw/level.do">직원록자료</a>
+                        </li>
+
+
+                        <li>
+                            <a href="javascript:;" onclick="return false;">
+                                대한제국 1908년도
+                            </a>
+                        </li>
+
+                        <li>
+
+
+                            宮內府
+
+
+                        </li>
+
+                    </ul>
+                    <div class="box-right">
+                        <div class="btn-hoi">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-content-wrap">
+                <div class="nd-box">
+                    <div class="nd-content">
+                        <div class="nd-content-wrap">
+                            <div class="con-section">
+                                <!--<div class="cont-title">조선총독부 관보</div> -->
+
+                                <!-- 검색영역 -->
+                                <!--직원록처럼 정보가 모두 보여야 하는 경우에는 부가정보 가로 사이즈를 유동적으로 하는게 더 맞을 것 같습니다. 사이즈 고정으로 하면 내용이 보여지지 않을 수 있습니다.-->
+                                <div class="search-wrap">
+                                    <section>
+                                        <div class="cmn-search-type06">
+                                            <div class="cmn-tabmenu">
+
+                                                <div class="item
+																	 selected
+
+																">
+                                                    <a href="javascript:;" onclick="hideResultWrap(); return false;">
+                                                        <span>대한제국</span>
+                                                    </a>
+                                                </div>
+
+                                                <div class="item
+
+
+																">
+                                                    <a href="javascript:;" onclick="hideResultWrap(); return false;">
+                                                        <span>조선총독부</span>
+                                                    </a>
+                                                </div>
+
+                                                <div class="item
+
+
+																">
+                                                    <a href="javascript:;" onclick="hideResultWrap(); return false;">
+                                                        <span>대한민국</span>
+                                                    </a>
+                                                </div>
+
+                                                <div class="item
+
+
+																">
+                                                    <a href="javascript:;" onclick="hideResultWrap(); return false;">
+                                                        <span>대만총독부</span>
+                                                    </a>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="search-cont">
+
+                                                <div
+                                                        class="tab-cont active">
+                                                    <div class="search-section">
+                                                        <div class="item">
+                                                            <ul>
+
+                                                                <li data-id="1908"
+                                                                    onclick="searchDataYear('대한제국','1908'); return false;"
+                                                                    class="selected">
+                                                                    <a href="javascript:;">1908년</a></li>
+
+                                                                <li data-id="1909"
+                                                                    onclick="searchDataYear('대한제국','1909'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1909년</a></li>
+
+                                                            </ul>
+                                                        </div>
+
+
+                                                        <div class="item" data-code="1908">
+                                                            <ul>
+
+                                                                <li data-id="1908-01"
+                                                                    onclick="searchData('1908-01'); return false;"
+                                                                    class="selected">
+                                                                    <a href="javascript:;">宮內府</a>
+                                                                </li>
+
+                                                                <li data-id="1908-02"
+                                                                    onclick="searchData('1908-02'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">內閣</a>
+                                                                </li>
+
+                                                                <li data-id="1908-03"
+                                                                    onclick="searchData('1908-03'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">中樞院</a>
+                                                                </li>
+
+                                                                <li data-id="1908-04"
+                                                                    onclick="searchData('1908-04'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">耆老所</a>
+                                                                </li>
+
+                                                                <li data-id="1908-05"
+                                                                    onclick="searchData('1908-05'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">內部</a>
+                                                                </li>
+
+                                                                <li data-id="1908-06"
+                                                                    onclick="searchData('1908-06'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">度支部</a>
+                                                                </li>
+
+                                                                <li data-id="1908-07"
+                                                                    onclick="searchData('1908-07'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">軍部</a>
+                                                                </li>
+
+                                                                <li data-id="1908-08"
+                                                                    onclick="searchData('1908-08'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">法部</a>
+                                                                </li>
+
+                                                                <li data-id="1908-09"
+                                                                    onclick="searchData('1908-09'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">學部</a>
+                                                                </li>
+
+                                                                <li data-id="1908-10"
+                                                                    onclick="searchData('1908-10'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">農商工部</a>
+                                                                </li>
+
+                                                            </ul>
+                                                        </div>
+
+                                                        <div class="item" data-code="1908-01">
+                                                            <ul>
+
+                                                                <li data-id="1908-01-008"
+                                                                    onclick="searchData('1908-01-008'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">本廳</a>
+                                                                </li>
+
+                                                                <li data-id="1908-01-006"
+                                                                    onclick="searchData('1908-01-006'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">大臣官房</a>
+                                                                </li>
+
+                                                                <li data-id="1908-01-011"
+                                                                    onclick="searchData('1908-01-011'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">侍從院</a>
+                                                                </li>
+
+                                                                <li data-id="1908-01-013"
+                                                                    onclick="searchData('1908-01-013'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">掌禮院</a>
+                                                                </li>
+
+                                                                <li data-id="1908-01-010"
+                                                                    onclick="searchData('1908-01-010'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">承寧府</a>
+                                                                </li>
+
+                                                                <li data-id="1908-01-019"
+                                                                    onclick="searchData('1908-01-019'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">皇后宮</a>
+                                                                </li>
+
+                                                                <li data-id="1908-01-007"
+                                                                    onclick="searchData('1908-01-007'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">東宮</a>
+                                                                </li>
+
+                                                                <li data-id="1908-01-003"
+                                                                    onclick="searchData('1908-01-003'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">奎章閣</a>
+                                                                </li>
+
+                                                                <li data-id="1908-01-004"
+                                                                    onclick="searchData('1908-01-004'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">內藏院</a>
+                                                                </li>
+
+                                                                <li data-id="1908-01-014"
+                                                                    onclick="searchData('1908-01-014'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">典膳司</a>
+                                                                </li>
+
+                                                                <li data-id="1908-01-018"
+                                                                    onclick="searchData('1908-01-018'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">主殿院</a>
+                                                                </li>
+
+                                                                <li data-id="1908-01-016"
+                                                                    onclick="searchData('1908-01-016'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">帝室會計監査院</a>
+                                                                </li>
+
+                                                                <li data-id="1908-01-017"
+                                                                    onclick="searchData('1908-01-017'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">宗親家</a>
+                                                                </li>
+
+                                                                <li data-id="1908-01-015"
+                                                                    onclick="searchData('1908-01-015'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">帝室財產整理局</a>
+                                                                </li>
+
+                                                                <li data-id="1908-01-009"
+                                                                    onclick="searchData('1908-01-009'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">修學院</a>
+                                                                </li>
+
+                                                                <li data-id="1908-01-005"
+                                                                    onclick="searchData('1908-01-005'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">壇廟社殿宮各陵園墓</a>
+                                                                </li>
+
+                                                                <li data-id="1908-01-001"
+                                                                    onclick="searchData('1908-01-001'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">各陵</a>
+                                                                </li>
+
+                                                                <li data-id="1908-01-002"
+                                                                    onclick="searchData('1908-01-002'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">各園</a>
+                                                                </li>
+
+                                                                <li data-id="1908-01-012"
+                                                                    onclick="searchData('1908-01-012'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">歷代殿陵</a>
+                                                                </li>
+
+                                                            </ul>
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+
+                                                <div
+                                                        class="tab-cont">
+                                                    <div class="search-section">
+                                                        <div class="item">
+                                                            <ul>
+
+                                                                <li data-id="1910"
+                                                                    onclick="searchDataYear('조선총독부','1910'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1910년</a></li>
+
+                                                                <li data-id="1911"
+                                                                    onclick="searchDataYear('조선총독부','1911'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1911년</a></li>
+
+                                                                <li data-id="1912"
+                                                                    onclick="searchDataYear('조선총독부','1912'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1912년</a></li>
+
+                                                                <li data-id="1913"
+                                                                    onclick="searchDataYear('조선총독부','1913'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1913년</a></li>
+
+                                                                <li data-id="1914"
+                                                                    onclick="searchDataYear('조선총독부','1914'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1914년</a></li>
+
+                                                                <li data-id="1915"
+                                                                    onclick="searchDataYear('조선총독부','1915'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1915년</a></li>
+
+                                                                <li data-id="1916"
+                                                                    onclick="searchDataYear('조선총독부','1916'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1916년</a></li>
+
+                                                                <li data-id="1917"
+                                                                    onclick="searchDataYear('조선총독부','1917'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1917년</a></li>
+
+                                                                <li data-id="1918"
+                                                                    onclick="searchDataYear('조선총독부','1918'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1918년</a></li>
+
+                                                                <li data-id="1919"
+                                                                    onclick="searchDataYear('조선총독부','1919'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1919년</a></li>
+
+                                                                <li data-id="1920"
+                                                                    onclick="searchDataYear('조선총독부','1920'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1920년</a></li>
+
+                                                                <li data-id="1921"
+                                                                    onclick="searchDataYear('조선총독부','1921'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1921년</a></li>
+
+                                                                <li data-id="1922"
+                                                                    onclick="searchDataYear('조선총독부','1922'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1922년</a></li>
+
+                                                                <li data-id="1923"
+                                                                    onclick="searchDataYear('조선총독부','1923'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1923년</a></li>
+
+                                                                <li data-id="1924"
+                                                                    onclick="searchDataYear('조선총독부','1924'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1924년</a></li>
+
+                                                                <li data-id="1925"
+                                                                    onclick="searchDataYear('조선총독부','1925'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1925년</a></li>
+
+                                                                <li data-id="1926"
+                                                                    onclick="searchDataYear('조선총독부','1926'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1926년</a></li>
+
+                                                                <li data-id="1927"
+                                                                    onclick="searchDataYear('조선총독부','1927'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1927년</a></li>
+
+                                                                <li data-id="1928"
+                                                                    onclick="searchDataYear('조선총독부','1928'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1928년</a></li>
+
+                                                                <li data-id="1929"
+                                                                    onclick="searchDataYear('조선총독부','1929'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1929년</a></li>
+
+                                                                <li data-id="1930"
+                                                                    onclick="searchDataYear('조선총독부','1930'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1930년</a></li>
+
+                                                                <li data-id="1931"
+                                                                    onclick="searchDataYear('조선총독부','1931'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1931년</a></li>
+
+                                                                <li data-id="1932"
+                                                                    onclick="searchDataYear('조선총독부','1932'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1932년</a></li>
+
+                                                                <li data-id="1933"
+                                                                    onclick="searchDataYear('조선총독부','1933'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1933년</a></li>
+
+                                                                <li data-id="1934"
+                                                                    onclick="searchDataYear('조선총독부','1934'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1934년</a></li>
+
+                                                                <li data-id="1935"
+                                                                    onclick="searchDataYear('조선총독부','1935'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1935년</a></li>
+
+                                                                <li data-id="1936"
+                                                                    onclick="searchDataYear('조선총독부','1936'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1936년</a></li>
+
+                                                                <li data-id="1937"
+                                                                    onclick="searchDataYear('조선총독부','1937'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1937년</a></li>
+
+                                                                <li data-id="1938"
+                                                                    onclick="searchDataYear('조선총독부','1938'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1938년</a></li>
+
+                                                                <li data-id="1939"
+                                                                    onclick="searchDataYear('조선총독부','1939'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1939년</a></li>
+
+                                                                <li data-id="1940"
+                                                                    onclick="searchDataYear('조선총독부','1940'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1940년</a></li>
+
+                                                                <li data-id="1941"
+                                                                    onclick="searchDataYear('조선총독부','1941'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1941년</a></li>
+
+                                                                <li data-id="1942"
+                                                                    onclick="searchDataYear('조선총독부','1942'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1942년</a></li>
+
+                                                                <li data-id="1943"
+                                                                    onclick="searchDataYear('조선총독부','1943'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1943년</a></li>
+
+                                                            </ul>
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+
+                                                <div
+                                                        class="tab-cont">
+                                                    <div class="search-section">
+                                                        <div class="item">
+                                                            <ul>
+
+                                                                <li data-id="1952"
+                                                                    onclick="searchDataYear('대한민국','1952'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1952년</a></li>
+
+                                                                <li data-id="1953"
+                                                                    onclick="searchDataYear('대한민국','1953'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1953년</a></li>
+
+                                                            </ul>
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+
+                                                <div
+                                                        class="tab-cont">
+                                                    <div class="search-section">
+                                                        <div class="item">
+                                                            <ul>
+
+                                                                <li data-id="1896"
+                                                                    onclick="searchDataYear('대만총독부','1896'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1896년</a></li>
+
+                                                                <li data-id="1897"
+                                                                    onclick="searchDataYear('대만총독부','1897'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1897년</a></li>
+
+                                                                <li data-id="1898"
+                                                                    onclick="searchDataYear('대만총독부','1898'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1898년</a></li>
+
+                                                                <li data-id="1899"
+                                                                    onclick="searchDataYear('대만총독부','1899'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1899년</a></li>
+
+                                                                <li data-id="1900"
+                                                                    onclick="searchDataYear('대만총독부','1900'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1900년</a></li>
+
+                                                                <li data-id="1901"
+                                                                    onclick="searchDataYear('대만총독부','1901'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1901년</a></li>
+
+                                                                <li data-id="1902"
+                                                                    onclick="searchDataYear('대만총독부','1902'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1902년</a></li>
+
+                                                                <li data-id="1903"
+                                                                    onclick="searchDataYear('대만총독부','1903'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1903년</a></li>
+
+                                                                <li data-id="1904"
+                                                                    onclick="searchDataYear('대만총독부','1904'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1904년</a></li>
+
+                                                                <li data-id="1905"
+                                                                    onclick="searchDataYear('대만총독부','1905'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1905년</a></li>
+
+                                                                <li data-id="1906"
+                                                                    onclick="searchDataYear('대만총독부','1906'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1906년</a></li>
+
+                                                                <li data-id="1907"
+                                                                    onclick="searchDataYear('대만총독부','1907'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1907년</a></li>
+
+                                                                <li data-id="1908"
+                                                                    onclick="searchDataYear('대만총독부','1908'); return false;"
+                                                                    class="selected">
+                                                                    <a href="javascript:;">1908년</a></li>
+
+                                                                <li data-id="1909"
+                                                                    onclick="searchDataYear('대만총독부','1909'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1909년</a></li>
+
+                                                                <li data-id="1910"
+                                                                    onclick="searchDataYear('대만총독부','1910'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1910년</a></li>
+
+                                                                <li data-id="1911"
+                                                                    onclick="searchDataYear('대만총독부','1911'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1911년</a></li>
+
+                                                                <li data-id="1912"
+                                                                    onclick="searchDataYear('대만총독부','1912'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1912년</a></li>
+
+                                                                <li data-id="1913"
+                                                                    onclick="searchDataYear('대만총독부','1913'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1913년</a></li>
+
+                                                                <li data-id="1914"
+                                                                    onclick="searchDataYear('대만총독부','1914'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1914년</a></li>
+
+                                                                <li data-id="1915"
+                                                                    onclick="searchDataYear('대만총독부','1915'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1915년</a></li>
+
+                                                                <li data-id="1916"
+                                                                    onclick="searchDataYear('대만총독부','1916'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1916년</a></li>
+
+                                                                <li data-id="1917"
+                                                                    onclick="searchDataYear('대만총독부','1917'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1917년</a></li>
+
+                                                                <li data-id="1918"
+                                                                    onclick="searchDataYear('대만총독부','1918'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1918년</a></li>
+
+                                                                <li data-id="1919"
+                                                                    onclick="searchDataYear('대만총독부','1919'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1919년</a></li>
+
+                                                                <li data-id="1920"
+                                                                    onclick="searchDataYear('대만총독부','1920'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1920년</a></li>
+
+                                                                <li data-id="1921"
+                                                                    onclick="searchDataYear('대만총독부','1921'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1921년</a></li>
+
+                                                                <li data-id="1922"
+                                                                    onclick="searchDataYear('대만총독부','1922'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1922년</a></li>
+
+                                                                <li data-id="1923"
+                                                                    onclick="searchDataYear('대만총독부','1923'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1923년</a></li>
+
+                                                                <li data-id="1924"
+                                                                    onclick="searchDataYear('대만총독부','1924'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1924년</a></li>
+
+                                                                <li data-id="1925"
+                                                                    onclick="searchDataYear('대만총독부','1925'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1925년</a></li>
+
+                                                                <li data-id="1926"
+                                                                    onclick="searchDataYear('대만총독부','1926'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1926년</a></li>
+
+                                                                <li data-id="1927"
+                                                                    onclick="searchDataYear('대만총독부','1927'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1927년</a></li>
+
+                                                                <li data-id="1928"
+                                                                    onclick="searchDataYear('대만총독부','1928'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1928년</a></li>
+
+                                                                <li data-id="1929"
+                                                                    onclick="searchDataYear('대만총독부','1929'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1929년</a></li>
+
+                                                                <li data-id="1930"
+                                                                    onclick="searchDataYear('대만총독부','1930'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1930년</a></li>
+
+                                                                <li data-id="1931"
+                                                                    onclick="searchDataYear('대만총독부','1931'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1931년</a></li>
+
+                                                                <li data-id="1932"
+                                                                    onclick="searchDataYear('대만총독부','1932'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1932년</a></li>
+
+                                                                <li data-id="1933"
+                                                                    onclick="searchDataYear('대만총독부','1933'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1933년</a></li>
+
+                                                                <li data-id="1934"
+                                                                    onclick="searchDataYear('대만총독부','1934'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1934년</a></li>
+
+                                                                <li data-id="1935"
+                                                                    onclick="searchDataYear('대만총독부','1935'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1935년</a></li>
+
+                                                                <li data-id="1936"
+                                                                    onclick="searchDataYear('대만총독부','1936'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1936년</a></li>
+
+                                                                <li data-id="1937"
+                                                                    onclick="searchDataYear('대만총독부','1937'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1937년</a></li>
+
+                                                                <li data-id="1938"
+                                                                    onclick="searchDataYear('대만총독부','1938'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1938년</a></li>
+
+                                                                <li data-id="1939"
+                                                                    onclick="searchDataYear('대만총독부','1939'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1939년</a></li>
+
+                                                                <li data-id="1940"
+                                                                    onclick="searchDataYear('대만총독부','1940'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1940년</a></li>
+
+                                                                <li data-id="1941"
+                                                                    onclick="searchDataYear('대만총독부','1941'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1941년</a></li>
+
+                                                                <li data-id="1942"
+                                                                    onclick="searchDataYear('대만총독부','1942'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1942년</a></li>
+
+                                                                <li data-id="1943"
+                                                                    onclick="searchDataYear('대만총독부','1943'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1943년</a></li>
+
+                                                                <li data-id="1944"
+                                                                    onclick="searchDataYear('대만총독부','1944'); return false;"
+                                                                >
+                                                                    <a href="javascript:;">1944년</a></li>
+
+                                                            </ul>
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <!-- 모바일 활성화 -->
+                                            <div class="mob-cmn-search-wrap">
+
+                                                <div class="mob-section active">
+                                                    <select id="mobYearSelectBox_0"
+                                                            onchange="searchDataYear('대한제국', this.value); return false;"
+                                                            title="연도 선택">
+                                                        <option value="">연도 선택</option>
+
+                                                        <option value="1908" selected>
+                                                            1908년
+                                                        </option>
+
+                                                        <option value="1909">
+                                                            1909년
+                                                        </option>
+
+                                                    </select>
+
+
+                                                    <select id="mobOrganSelectBox_0"
+                                                            onchange="searchData(this.value); return false;"
+                                                            title="기구 선택">
+                                                        <option value="">선택</option>
+
+                                                        <option value="1908-01" selected>
+                                                            宮內府
+                                                        </option>
+
+                                                        <option value="1908-02">
+                                                            內閣
+                                                        </option>
+
+                                                        <option value="1908-03">
+                                                            中樞院
+                                                        </option>
+
+                                                        <option value="1908-04">
+                                                            耆老所
+                                                        </option>
+
+                                                        <option value="1908-05">
+                                                            內部
+                                                        </option>
+
+                                                        <option value="1908-06">
+                                                            度支部
+                                                        </option>
+
+                                                        <option value="1908-07">
+                                                            軍部
+                                                        </option>
+
+                                                        <option value="1908-08">
+                                                            法部
+                                                        </option>
+
+                                                        <option value="1908-09">
+                                                            學部
+                                                        </option>
+
+                                                        <option value="1908-10">
+                                                            農商工部
+                                                        </option>
+
+                                                    </select>
+
+                                                    <select id="mobOrganSelectBox_1"
+                                                            onchange="searchData(this.value); return false;"
+                                                            title="기구 선택">
+                                                        <option value="">선택</option>
+
+                                                        <option value="1908-01-008">
+                                                            本廳
+                                                        </option>
+
+                                                        <option value="1908-01-006">
+                                                            大臣官房
+                                                        </option>
+
+                                                        <option value="1908-01-011">
+                                                            侍從院
+                                                        </option>
+
+                                                        <option value="1908-01-013">
+                                                            掌禮院
+                                                        </option>
+
+                                                        <option value="1908-01-010">
+                                                            承寧府
+                                                        </option>
+
+                                                        <option value="1908-01-019">
+                                                            皇后宮
+                                                        </option>
+
+                                                        <option value="1908-01-007">
+                                                            東宮
+                                                        </option>
+
+                                                        <option value="1908-01-003">
+                                                            奎章閣
+                                                        </option>
+
+                                                        <option value="1908-01-004">
+                                                            內藏院
+                                                        </option>
+
+                                                        <option value="1908-01-014">
+                                                            典膳司
+                                                        </option>
+
+                                                        <option value="1908-01-018">
+                                                            主殿院
+                                                        </option>
+
+                                                        <option value="1908-01-016">
+                                                            帝室會計監査院
+                                                        </option>
+
+                                                        <option value="1908-01-017">
+                                                            宗親家
+                                                        </option>
+
+                                                        <option value="1908-01-015">
+                                                            帝室財產整理局
+                                                        </option>
+
+                                                        <option value="1908-01-009">
+                                                            修學院
+                                                        </option>
+
+                                                        <option value="1908-01-005">
+                                                            壇廟社殿宮各陵園墓
+                                                        </option>
+
+                                                        <option value="1908-01-001">
+                                                            各陵
+                                                        </option>
+
+                                                        <option value="1908-01-002">
+                                                            各園
+                                                        </option>
+
+                                                        <option value="1908-01-012">
+                                                            歷代殿陵
+                                                        </option>
+
+                                                    </select>
+
+
+                                                </div>
+
+                                                <div class="mob-section ">
+                                                    <select id="mobYearSelectBox_1"
+                                                            onchange="searchDataYear('조선총독부', this.value); return false;"
+                                                            title="연도 선택">
+                                                        <option value="">연도 선택</option>
+
+                                                        <option value="1910">
+                                                            1910년
+                                                        </option>
+
+                                                        <option value="1911">
+                                                            1911년
+                                                        </option>
+
+                                                        <option value="1912">
+                                                            1912년
+                                                        </option>
+
+                                                        <option value="1913">
+                                                            1913년
+                                                        </option>
+
+                                                        <option value="1914">
+                                                            1914년
+                                                        </option>
+
+                                                        <option value="1915">
+                                                            1915년
+                                                        </option>
+
+                                                        <option value="1916">
+                                                            1916년
+                                                        </option>
+
+                                                        <option value="1917">
+                                                            1917년
+                                                        </option>
+
+                                                        <option value="1918">
+                                                            1918년
+                                                        </option>
+
+                                                        <option value="1919">
+                                                            1919년
+                                                        </option>
+
+                                                        <option value="1920">
+                                                            1920년
+                                                        </option>
+
+                                                        <option value="1921">
+                                                            1921년
+                                                        </option>
+
+                                                        <option value="1922">
+                                                            1922년
+                                                        </option>
+
+                                                        <option value="1923">
+                                                            1923년
+                                                        </option>
+
+                                                        <option value="1924">
+                                                            1924년
+                                                        </option>
+
+                                                        <option value="1925">
+                                                            1925년
+                                                        </option>
+
+                                                        <option value="1926">
+                                                            1926년
+                                                        </option>
+
+                                                        <option value="1927">
+                                                            1927년
+                                                        </option>
+
+                                                        <option value="1928">
+                                                            1928년
+                                                        </option>
+
+                                                        <option value="1929">
+                                                            1929년
+                                                        </option>
+
+                                                        <option value="1930">
+                                                            1930년
+                                                        </option>
+
+                                                        <option value="1931">
+                                                            1931년
+                                                        </option>
+
+                                                        <option value="1932">
+                                                            1932년
+                                                        </option>
+
+                                                        <option value="1933">
+                                                            1933년
+                                                        </option>
+
+                                                        <option value="1934">
+                                                            1934년
+                                                        </option>
+
+                                                        <option value="1935">
+                                                            1935년
+                                                        </option>
+
+                                                        <option value="1936">
+                                                            1936년
+                                                        </option>
+
+                                                        <option value="1937">
+                                                            1937년
+                                                        </option>
+
+                                                        <option value="1938">
+                                                            1938년
+                                                        </option>
+
+                                                        <option value="1939">
+                                                            1939년
+                                                        </option>
+
+                                                        <option value="1940">
+                                                            1940년
+                                                        </option>
+
+                                                        <option value="1941">
+                                                            1941년
+                                                        </option>
+
+                                                        <option value="1942">
+                                                            1942년
+                                                        </option>
+
+                                                        <option value="1943">
+                                                            1943년
+                                                        </option>
+
+                                                    </select>
+
+
+                                                </div>
+
+                                                <div class="mob-section ">
+                                                    <select id="mobYearSelectBox_2"
+                                                            onchange="searchDataYear('대한민국', this.value); return false;"
+                                                            title="연도 선택">
+                                                        <option value="">연도 선택</option>
+
+                                                        <option value="1952">
+                                                            1952년
+                                                        </option>
+
+                                                        <option value="1953">
+                                                            1953년
+                                                        </option>
+
+                                                    </select>
+
+
+                                                </div>
+
+                                                <div class="mob-section ">
+                                                    <select id="mobYearSelectBox_3"
+                                                            onchange="searchDataYear('대만총독부', this.value); return false;"
+                                                            title="연도 선택">
+                                                        <option value="">연도 선택</option>
+
+                                                        <option value="1896">
+                                                            1896년
+                                                        </option>
+
+                                                        <option value="1897">
+                                                            1897년
+                                                        </option>
+
+                                                        <option value="1898">
+                                                            1898년
+                                                        </option>
+
+                                                        <option value="1899">
+                                                            1899년
+                                                        </option>
+
+                                                        <option value="1900">
+                                                            1900년
+                                                        </option>
+
+                                                        <option value="1901">
+                                                            1901년
+                                                        </option>
+
+                                                        <option value="1902">
+                                                            1902년
+                                                        </option>
+
+                                                        <option value="1903">
+                                                            1903년
+                                                        </option>
+
+                                                        <option value="1904">
+                                                            1904년
+                                                        </option>
+
+                                                        <option value="1905">
+                                                            1905년
+                                                        </option>
+
+                                                        <option value="1906">
+                                                            1906년
+                                                        </option>
+
+                                                        <option value="1907">
+                                                            1907년
+                                                        </option>
+
+                                                        <option value="1908" selected>
+                                                            1908년
+                                                        </option>
+
+                                                        <option value="1909">
+                                                            1909년
+                                                        </option>
+
+                                                        <option value="1910">
+                                                            1910년
+                                                        </option>
+
+                                                        <option value="1911">
+                                                            1911년
+                                                        </option>
+
+                                                        <option value="1912">
+                                                            1912년
+                                                        </option>
+
+                                                        <option value="1913">
+                                                            1913년
+                                                        </option>
+
+                                                        <option value="1914">
+                                                            1914년
+                                                        </option>
+
+                                                        <option value="1915">
+                                                            1915년
+                                                        </option>
+
+                                                        <option value="1916">
+                                                            1916년
+                                                        </option>
+
+                                                        <option value="1917">
+                                                            1917년
+                                                        </option>
+
+                                                        <option value="1918">
+                                                            1918년
+                                                        </option>
+
+                                                        <option value="1919">
+                                                            1919년
+                                                        </option>
+
+                                                        <option value="1920">
+                                                            1920년
+                                                        </option>
+
+                                                        <option value="1921">
+                                                            1921년
+                                                        </option>
+
+                                                        <option value="1922">
+                                                            1922년
+                                                        </option>
+
+                                                        <option value="1923">
+                                                            1923년
+                                                        </option>
+
+                                                        <option value="1924">
+                                                            1924년
+                                                        </option>
+
+                                                        <option value="1925">
+                                                            1925년
+                                                        </option>
+
+                                                        <option value="1926">
+                                                            1926년
+                                                        </option>
+
+                                                        <option value="1927">
+                                                            1927년
+                                                        </option>
+
+                                                        <option value="1928">
+                                                            1928년
+                                                        </option>
+
+                                                        <option value="1929">
+                                                            1929년
+                                                        </option>
+
+                                                        <option value="1930">
+                                                            1930년
+                                                        </option>
+
+                                                        <option value="1931">
+                                                            1931년
+                                                        </option>
+
+                                                        <option value="1932">
+                                                            1932년
+                                                        </option>
+
+                                                        <option value="1933">
+                                                            1933년
+                                                        </option>
+
+                                                        <option value="1934">
+                                                            1934년
+                                                        </option>
+
+                                                        <option value="1935">
+                                                            1935년
+                                                        </option>
+
+                                                        <option value="1936">
+                                                            1936년
+                                                        </option>
+
+                                                        <option value="1937">
+                                                            1937년
+                                                        </option>
+
+                                                        <option value="1938">
+                                                            1938년
+                                                        </option>
+
+                                                        <option value="1939">
+                                                            1939년
+                                                        </option>
+
+                                                        <option value="1940">
+                                                            1940년
+                                                        </option>
+
+                                                        <option value="1941">
+                                                            1941년
+                                                        </option>
+
+                                                        <option value="1942">
+                                                            1942년
+                                                        </option>
+
+                                                        <option value="1943">
+                                                            1943년
+                                                        </option>
+
+                                                        <option value="1944">
+                                                            1944년
+                                                        </option>
+
+                                                    </select>
+
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                                <!-- //검색영역 -->
+
+                                <!-- 검색결과 -->
+                                <div class="result-wrap">
+                                    <div class="list-wrap">
+                                        <div class="cmn-title-type01" id="selectedList2">
+                                            <ul>
+
+
+                                                <li>
+														<span>
+															대한제국 1908년도
+
+
+															<a href="javascript:;"
+                                                               onclick="fnImageViewerJwPopup('', '1908'); return false;">
+																<img src="/resources/contemp/images/ico_viewImage.svg"
+                                                                     alt="대한제국 1908년도 원문이미지"
+                                                                     title="대한제국 1908년도 원문이미지"/>
+															</a>
+														</span>
+                                                </li>
+
+                                                <li>
+													<span>
+														宮內府
+														<a href="javascript:;"
+                                                           onclick="fnImageViewerJwPopup('', '1908-01'); return false;">
+															<img src="/resources/contemp/images/ico_viewImage.svg"
+                                                                 alt="대한제국 1908년도 宮內府 원문이미지"
+                                                                 title="대한제국 1908년도 宮內府 원문이미지"/>
+														</a>
+													</span>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+
+                                        <div class="cmn-table-type cmn-table-type02 cmn-table-type-bg">
+                                            <div class="cmn-list-table-control">
+                                                <div class="box-select">
+                                                    <div class="box">
+                                                        <select name="orderColumn"
+                                                                onchange="settingParam(this); movePage();"
+                                                                title="정렬 컬럼 선택">
+                                                            <option value="level_id" selected>ID</option>
+                                                            <option value="year">조사시기</option>
+                                                            <option value="main_title">이름</option>
+
+                                                            <option value="position">관직</option>
+                                                            <option value="official_rank">관등</option>
+                                                            <option value="merits">공훈</option>
+                                                        </select>
+                                                        <select name="recordCountPerPage"
+                                                                onchange="settingParam(this); movePage('1', '1');"
+                                                                title="페이징당 수 선택">
+                                                            <option>20</option>
+                                                            <option>50</option>
+                                                            <option>100</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="box-paginate">
+                                                    <div class="total-num">총 <b>0</b>건</div>
+                                                    <div class="paginate">
+
+                                                        <div class="input-wrap">
+                                                            <label><input type="text" name="pageNum" value="1"
+                                                                          class="onlyNum"
+                                                                          onkeyup="if(window.event.keyCode==13){(movePage(this.value , 1 ))}"/></label>
+                                                            <div class="slash">/</div>
+                                                            <div class="total">1</div>
+                                                            <a href="#none" class="btn-go"
+                                                               onClick="movePage(null , 1 )"><u>Go</u></a>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="table-cont">
+
+                                                <div class="table-item">데이터가 없습니다.</div>
+
+
+                                            </div>
+
+                                            <div class="cmn-list-table-control">
+                                                <div class="box-select">
+                                                    <div class="box">
+                                                        <select name="orderColumn"
+                                                                onchange="settingParam(this); movePage();"
+                                                                title="정렬 컬럼 선택">
+                                                            <option value="level_id" selected>ID</option>
+                                                            <option value="year">조사시기</option>
+                                                            <option value="main_title">이름</option>
+
+                                                            <option value="position">관직</option>
+                                                            <option value="official_rank">관등</option>
+                                                            <option value="merits">공훈</option>
+                                                        </select>
+                                                        <select name="recordCountPerPage"
+                                                                onchange="settingParam(this); movePage('1', '1');"
+                                                                title="페이징당 수 선택">
+                                                            <option>20</option>
+                                                            <option>50</option>
+                                                            <option>100</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="box-paginate">
+                                                    <div class="total-num">총 <b>0</b>건</div>
+                                                    <div class="paginate">
+
+                                                        <div class="input-wrap">
+                                                            <label><input type="text" id="pageNumBottom" class="onlyNum"
+                                                                          value="1"
+                                                                          onkeyup="if(window.event.keyCode==13){(movePage(this.value , 1 ))}"/></label>
+                                                            <div class="slash">/</div>
+                                                            <div class="total">1</div>
+                                                            <a href="#none" class="btn-go"
+                                                               onclick="movePageByBottom(1);"><u>Go</u></a>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <script>
+
+                                                    function movePageByBottom(totalPage) {
+                                                        var page = $("#pageNumBottom").val();
+                                                        movePage(page, totalPage);
+                                                    }
+
+                                                </script>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- //검색결과 -->
+                            </div>
+
+
+                            <footer id="footer">
+                                <div class="footer-inner">
+                                    <div class="footer-box">
+                                        <div class="box-left">
+
+                                            <div class="info">
+                                                <div class="link-wrap">
+                                                    <a href="https://www.history.go.kr/contents/contentsPage.do?groupId=000000000571&menuId=000000000572&pageId=000000000211"
+                                                       class="color" target="_blank">개인정보취급방침</a>
+                                                    <a href="/contemp/errorReportList.do">오류신고 확인</a>
+                                                </div>
+
+
+                                                <div class="info-wrap">
+                                                    <address>13809 경기도 과천시 교육원로 86<span class="copyright">Copyright &copy; National Institute of Korean History All Rights Reserved.</span>
+                                                    </address>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="box-right">
+
+
+                                            <div class="select-box">
+                                                <label for="relatedSite"></label>
+                                                <select id="relatedSite"
+                                                        onchange="if (value) {window.open(value, '_blank'); return false;}"
+                                                        title="관련사이트">
+                                                    <option value="" selected>관련 사이트</option>
+                                                    <!-- <option value="http://thesaurus.history.go.kr/">한국역사용어시소러스</option> -->
+                                                    <option value="/thesaurus/">한국역사용어시소러스</option>
+
+                                                    <option value="/unicode/">유니코드한자검색시스템</option>
+                                                    <option value="http://contents.history.go.kr/">우리역사넷</option>
+                                                    <option value="http://archive.history.go.kr/">전자사료관</option>
+                                                    <option value="https://kdp.aks.ac.kr/">한국학자료통합플랫폼</option>
+                                                    <option value="https://kyudb.snu.ac.kr/">규장각원문검색서비스</option>
+                                                    <option value="http://contents.nahf.or.kr/">동북아역사넷</option>
+                                                    <option value="https://www.ugyo.net/">유교넷</option>
+                                                    <option value="https://db.itkc.or.kr/">한국고전종합DB</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </footer>
+
+                        </div>
+                        <div class="quick-wrap">
+                            <div class="quick-wrap-inner">
+                                <div class="inner">
+                                    <div class="item-wrap">
+                                        <!--모바일에서만 사라지는 아이콘에는 noDpMob / 태블릿과 모바일에서 사라지는 아이콘에는 noDpTab / 사용하지 않는 아이콘에는 noDP 클래스를 넣어주세요-->
+
+                                        <div onclick="changeLang()" class="item item-trans ">
+                                            <a href="javascript:;">
+                                                <figure>
+                                                    <span><img src="/resources/contemp/images/quick_ico_btn_trans.svg"
+                                                               alt="번역문" title="번역문"/></span>
+                                                    <figcaption>번역문</figcaption>
+                                                </figure>
+                                            </a>
+                                        </div>
+
+                                        <div class="item item-print noDpMob">
+                                            <a href="javascript:;">
+                                                <figure>
+                                                    <span><img src="/resources/contemp/images/quick_ico_btn_print.svg"
+                                                               alt="출력" title="출력"/></span>
+                                                    <figcaption>출력</figcaption>
+                                                </figure>
+                                            </a>
+                                        </div>
+
+                                        <div class="item item-error noDpMob">
+                                            <a href="javascript:;">
+                                                <figure>
+                                                    <span><img src="/resources/contemp/images/quick_ico_btn_error.svg"
+                                                               alt="오류신고" title="오류신고"/></span>
+                                                    <figcaption>오류신고</figcaption>
+                                                </figure>
+                                            </a>
+                                        </div>
+
+                                        <div class="item item-download">
+
+
+                                            <a href="javascript:;"
+                                               onclick="modernDownloadFile('jw', '', '', 'RDB'); return false;">
+                                                <figure>
+                                                    <span><img
+                                                            src="/resources/contemp/images/quick_ico_btn_download.svg"
+                                                            alt="다운로드" title="다운로드"></span>
+                                                    <figcaption>다운로드</figcaption>
+                                                </figure>
+                                            </a>
+
+
+                                        </div>
+
+                                        <div class="item item-top btn-top">
+                                            <a href="javascript:;">
+                                                <figure>
+                                                    <span><img src="/resources/contemp/images/quick_ico_btn_totop.svg"
+                                                               alt="맨위로" title="맨위로"/></span>
+                                                </figure>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="item item-top btn-top">
+                                        <a href="javascript:;">
+                                            <figure>
+                                                <span><img src="/resources/contemp/images/quick_ico_btn_totop.svg"
+                                                           alt="맨위로" title="맨위로"/></span>
+                                            </figure>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <form id="downlaodForm">
+        <input type="hidden" id="jwTypes" name="types" value="대한제국"/>
+        <input type="hidden" name="organCode" value="1908-01"/>
+        <input type="hidden" name="levelId" value=""/>
+        <input type="hidden" name="orderColumn" value="level_id"/>
+    </form>
+
+    <script>
+
+        // 페이지 이동
+        function movePage(page, maxPage, type, obj) {
+            let map = new Map();
+
+            map.set("organCode", '1908-01');
+            map.set("lang", 'ch');
+
+            if (page == null) {
+                page = $("input[name='pageNum']").val();
+            } else if (page <= 0) {
+                page = 1;
+            }
+            if (page >= maxPage && maxPage != null) {
+                page = maxPage;
+            }
+            map.set("pageIndex", page);
+            map.set("orderColumn", $("select[name='orderColumn']").val());
+            map.set("recordCountPerPage", $("select[name='recordCountPerPage']").val());
+
+            if (!isEmpty(obj)) {
+                map.set(obj.name, obj.value);
+            }
+
+            return redirectPage(map, '/contemp/jw/level.do');
+        }
+
+        // 목록 조회 By 구분 연도
+        function searchDataYear(types, year) {
+            let map = new Map();
+            map.set("types", types);
+            map.set("year", year);
+            map.set("lang", 'ch');
+
+            return redirectPage(map, '/contemp/jw/level.do');
+        }
+
+        // 목록 조회 By 기구
+        function searchData(organCode) {
+            let map = new Map();
+            map.set("organCode", organCode);
+            map.set("lang", 'ch');
+
+            return redirectPage(map, '/contemp/jw/level.do');
+        }
+
+        // 탭 변경이 일어났을시 ResultWrap 숨김처리
+        function hideResultWrap() {
+            $(".result-wrap").css("display", "none");
+        }
+
+        // 직원록의 경우 types 를 원문/국역 의미로 사용지않아서   lang 이란 변수 로 원문 /국역 구분
+        function changeLang() {
+            let host = "/contemp/jw/level.do";
+            let params = new URLSearchParams(location.search);
+            //console.log("params=" + params);
+            let lang = new URLSearchParams(location.search).get("lang");
+            params.set("lang", (lang == 'ko' ? 'ch' : 'ko'));
+
+            location.href = host + "?" + params;
+        }
+
+    </script>
+
+    <!-- //container -->
+
+
+</div>
+
+<!-- 자료인용방법 -->
+<div class="layer-popup lp-data">
+    <div class="scroll-wrap">
+        <div class="lp-inner">
+            <div class="lp-title">
+                <div class="txt">디지털역사자료 인용방법</div>
+                <a href="#none" class="btn"><img src="/resources/contemp/images/cmn_ico_close_bk.svg" alt="닫기"
+                                                 title="닫기"/></a>
+            </div>
+            <div class="lp-content">
+                <div class="item-wrap">
+                    <div class="item">
+                        <div class="item-title">
+                            <div class="txt1">1안</div>
+                            <div class="txt2 fc4">저자, 기사명, 자료명. URL (검색날짜)</div>
+                        </div>
+                        <div class="item-cont">
+                            주)1 황현, “高宗三十二年乙未”, ≪매천야록≫(한국사료총서 제1권,<br/>
+                            1971).http://db.history.go.kr/id/sa_001_0030_0020 (accessed 2007. 09. 03)<br/><br/>
+                            주)2 “日陸戰隊撤退는 南北戰으로 中止? 今回 半數만 交代”, ≪동아일보≫ 1928년 3월 19일.<br/>
+                            http://db.history.go.kr/id/np_da_1928_03_19_0030 (accessed 2007. 09. 03)
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-title">
+                            <div class="txt1">2안</div>
+                            <div class="txt2 fc4">저자, 기사명, 자료명.(사이트명, URL, ID, 검색날짜)</div>
+                        </div>
+                        <div class="item-cont">
+                            주)1 황현, “高宗三十二年乙未”, ≪매천야록≫(한국사료총서 제1권, 1971).(국사편찬위원회 한국사데이터베이스
+                            http://www.history.go.kr, sa_001_0030_0020, 2007. 09. 03)<br/><br/>
+                            주)2 “日陸戰隊撤退는 南北戰으로 中止? 今回 半數만 交代”, ≪동아일보≫ 1928년 3월 19일. (국사편찬위원회 한국사데이터베이스
+                            http://www.history.go.kr, np_da_1928_03_19_0030, accessed 2007. 09. 03)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //자료인용방법 -->
+
+<!-- 오류신고 -->
+
+
+<div class="layer-popup lp-error">
+    <div class="scroll-wrap">
+        <div class="lp-inner">
+            <div class="lp-title">
+                <div class="txt">오류신고</div>
+                <a href="javascript:;" class="btn"><img src="/resources/korea/images/cmn_ico_close_bk.svg" alt="닫기"
+                                                        title="닫기"/></a>
+            </div>
+            <div class="lp-content">
+                <div class="guide">
+                    <!-- <div class="txt">본 사이트 자료 중 잘못된 정보를 발견하였거나 사용 중 불편한 사항이 있을 경우 알려주십시오. 이용자의 참여가 사이트 가치 향상에 큰 도움이 됩니다.</div> -->
+                    <div class="txt ico"><span class="fc4">사이트 하단의 ‘오류신고 확인’ 메뉴</span>를 이용하시면 신고 내용의 적용여부를 확인하실 수 있습니다.
+                    </div>
+                    <div class="txt">(오류유형: 오자·탈자, 링크 오류, 이미지 오류, 기타)</div>
+                    <div class="txt">전화번호, 이메일 등 개인정보는 삭제하오니 유념하시기 바랍니다.</div>
+                </div>
+                <form id="errorReportForm" name="errorReportForm" method="post">
+                    <input type="hidden" name="itemName" value="직원록자료"/>
+
+
+                    <input type="hidden" name="levelId" value=""/>
+
+
+                    <div class="data-wrap">
+                        <div class="item">
+                            <div class="tit">자료명</div>
+                            <div class="txt"><span class="fc4">직원록자료</span></div>
+                        </div>
+                        <div class="item">
+
+
+                            <div class="tit">자료위치</div>
+                            <div class="txt">자료일람화면</div>
+                            <input type="hidden" name="location" value="자료일람화면"/>
+                        </div>
+                    </div>
+                    <div class="form-wrap">
+                        <div class="item">
+                            <div class="tit"><label for="errorTitle">제목</label></div>
+                            <div class="cont"><input type="text" id="errorTitle" name="title" class="input_error"/>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="tit"><label for="errorType">오류 유형</label></div>
+                            <div class="cont">
+                                <select id="errorType" name="errorType" class="input_error">
+                                    <option value="">선택하세요</option>
+                                    <option value="오자·탈자">오자·탈자</option>
+                                    <option value="링크 오류">링크 오류</option>
+                                    <option value="이미지 오류">이미지 오류</option>
+                                    <!-- <option value="내용 오류">내용 오류</option> -->
+                                    <option value="기타">기타</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="tit"><label for="errorContent">요청 내용</label></div>
+                            <div class="cont"><textarea id="errorContent" name="content" class="input_error"
+                                                        placeholder="상세한 정보 입력 부탁드립니다."></textarea></div>
+                        </div>
+                        <div class="item">
+                            <div class="tit"><label for="reporter">이름</label></div>
+                            <div class="cont"><input type="text" id="reporter" name="reporter" class="input_error"/>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="tit"><label for="reporter">자동입력 방지문자</label></div>
+                            <div class="cont btn-wrap">
+                                <img id="captchaImg" src="" title="캡차 이미지" alt="캡차 이미지"/>
+                                <button type="button" id="refresh_btn" class="reset">새로고침</button>
+                                <input type="text" id="captchaStr" name="captchaStr" maxlength="6"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-wrap">
+                        <button type="button" class="submit" onclick="fnRegisterErrorReport(); return false;">등록하기
+                        </button>
+                        <button type="button" class="reset" onclick="fnResetErrorPopup(); return false;">다시 쓰기</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        // 오류신고 버튼 클릭 이벤트
+        if ($(".quick-wrap .item-wrap .item-error").length) {
+            $(".quick-wrap .item-wrap .item-error").off("click").on("click", function () {
+                // 자동입력 방지문자 이미지 갱신
+                fnRefreshCaptchaImg();
+
+                // 오류신고 다시 쓰기
+                fnResetErrorPopup();
+
+                $(".dimmed").addClass("active");
+                $(".layer-popup.lp-error").addClass("active");
+            });
+        }
+
+        // 조선시대 법령자료 오류신고 버튼 클릭 이벤트
+        if ($("a.help.dpWeb").length) {
+            $("a.help.dpWeb").off("click").on("click", function () {
+                // 자동입력 방지문자 이미지 갱신
+                fnRefreshCaptchaImg();
+
+                // 오류신고 다시 쓰기
+                fnResetErrorPopup();
+
+                $(".dimmed").addClass("active");
+                $(".layer-popup.lp-error").addClass("active");
+            });
+        }
+
+        // 헌정사 자료 DB(cons) 오류신고 버튼 클릭 이벤트
+        if ($(".bt_fnc .btn_help").length) {
+            $(".bt_fnc .btn_help").off("click").on("click", function () {
+                // 자동입력 방지문자 이미지 갱신
+                fnRefreshCaptchaImg();
+
+                // 오류신고 다시 쓰기
+                fnResetErrorPopup();
+
+                $(".dimmed").addClass("active");
+                $(".layer-popup.lp-error").addClass("active");
+            });
+        }
+
+        // 자동입력 방지문자 새로고침 클릭 이벤트
+        $("#refresh_btn").on("click", function () {
+            // 자동입력 방지문자 이미지 갱신
+            fnRefreshCaptchaImg();
+        });
+    });
+
+    // 자동입력 방지문자 이미지 갱신
+    function fnRefreshCaptchaImg() {
+        $("#captchaImg").attr("src", "/captchaImg.do");
+    }
+
+    // 오류신고 다시 쓰기
+    function fnResetErrorPopup() {
+        $("#errorTitle").val("");
+        $("#errorType").val("");
+        $("#errorContent").val("");
+        $("#reporter").val("");
+        $("#captchaStr").val("");
+    }
+
+    // 오류신고 등록
+    function fnRegisterErrorReport() {
+        const titleVal = $("#errorTitle").val();
+        const errorTypeVal = $("#errorType").val();
+        const contentVal = $("#errorContent").val();
+        const reporterVal = $("#reporter").val();
+
+        let inputCount = 0;
+        $(".input_error").each(function () {
+            if ($.trim($(this).val())) {
+                inputCount++;
+            }
+        });
+        if (inputCount < 4) {
+            alert('모든 입력란 기입을 부탁드립니다');
+            return;
+        }
+
+        if (!$.trim(titleVal)) {
+            alert('제목을 입력해주세요.');
+            $("#errorTitle").focus();
+            return;
+        }
+        if (!$.trim(errorTypeVal)) {
+            alert('오류유형을 선택해주세요.');
+            $("#errorType").focus();
+            return;
+        }
+        if (!$.trim(contentVal)) {
+            alert('내용을 입력해주세요.');
+            $("#errorContent").focus();
+            return;
+        }
+        if (!$.trim(reporterVal)) {
+            alert('이름을 입력해주세요.');
+            $("#reporter").focus();
+            return;
+        }
+
+        // 자동입력 방지문자
+        const captchaStr = $("#captchaStr").val();
+        if (!$.trim(captchaStr)) {
+            alert('자동입력 방지문자를 입력해주세요.');
+            $("#captchaStr").focus();
+            return;
+        } else {
+            $("#captchaStr").val($.trim(captchaStr));
+        }
+
+        if (confirm('오류신고를 하시겠습니까?')) {
+            $.ajax({
+                url: "/errorReport/insertErrorReportAjax.do",
+                type: "post",
+                data: $("[name=errorReportForm]").serialize(),
+                dataType: "json",
+                success: function (data) {
+                    var result = data.result;
+                    var message = data.message;
+
+                    // 결과 message
+                    alert(message);
+
+                    if (result == "success") {
+                        $('.dimmed').removeClass('active');
+                        $('.layer-popup.lp-error').removeClass('active');
+                    } else {
+                        // 등록 실패 시 자동입력 방지문자 이미지 갱신
+                        fnRefreshCaptchaImg();
+                        $("#captchaStr").val("");
+                    }
+                },
+                error: function (xhr, status, error) {
+                    alert("오류신고  등록 error!");
+                }
+            });
+        }
+    }
+
+</script>
+
+<!-- //오류신고 -->
+
+<!-- 자료선택 -->
+<div class="layer-popup-sm lp-data-select">
+    <div class="lp-inner">
+        <div class="lp-title">
+            <div class="txt">자료 선택</div>
+            <a href="javascript:;" class="btn" onclick="return false;">
+                <img src="/resources/contemp/images/cmn_ico_close_bk.svg" id="dataCloseBtn" alt="닫기" title="닫기"/>
+            </a>
+        </div>
+        <div class="scroll-wrap">
+            <div class="lp-content">
+                <ul id="detail_search_item_ul">
+
+
+                    <li id="detail_search_item_li_npgn">
+                        <a href="#none" onclick="fnSelectSearchItem('npgn', '경남신문계열'); return false;">
+                            경남신문계열
+                        </a>
+                    </li>
+
+
+                    <li id="detail_search_item_li_im">
+                        <a href="#none" onclick="fnSelectSearchItem('im', '근현대인물자료'); return false;">
+                            근현대인물자료
+                        </a>
+                    </li>
+
+
+                    <li id="detail_search_item_li_ma">
+                        <a href="#none" onclick="fnSelectSearchItem('ma', '근현대잡지자료'); return false;">
+                            근현대잡지자료
+                        </a>
+                    </li>
+
+
+                    <li id="detail_search_item_li_hs">
+                        <a href="#none" onclick="fnSelectSearchItem('hs', '근현대회사조합자료'); return false;">
+                            근현대회사조합자료
+                        </a>
+                    </li>
+
+
+                    <li id="detail_search_item_li_npda">
+                        <a href="#none" onclick="fnSelectSearchItem('npda', '동아일보'); return false;">
+                            동아일보
+                        </a>
+                    </li>
+
+
+                    <li id="detail_search_item_li_gbmg">
+                        <a href="#none" onclick="fnSelectSearchItem('gbmg', '미군정 관보'); return false;">
+                            미군정 관보
+                        </a>
+                    </li>
+
+
+                    <li id="detail_search_item_li_husa">
+                        <a href="#none" onclick="fnSelectSearchItem('husa', '미군정기 주한미군사'); return false;">
+                            미군정기 주한미군사
+                        </a>
+                    </li>
+
+
+                    <li id="detail_search_item_li_pm">
+                        <a href="#none" onclick="fnSelectSearchItem('pm', '미군정기군정단·군정중대문서'); return false;">
+                            미군정기군정단·군정중대문서
+                        </a>
+                    </li>
+
+
+                    <li id="detail_search_item_li_an">
+                        <a href="#none" onclick="fnSelectSearchItem('an', '반민특위조사기록'); return false;">
+                            반민특위조사기록
+                        </a>
+                    </li>
+
+
+                    <li id="detail_search_item_li_nkgb">
+                        <a href="#none" onclick="fnSelectSearchItem('nkgb', '북한 공보'); return false;">
+                            북한 공보
+                        </a>
+                    </li>
+
+
+                    <li id="detail_search_item_li_nkhc">
+                        <a href="#none" onclick="fnSelectSearchItem('nkhc', '북한관계사료집'); return false;">
+                            북한관계사료집
+                        </a>
+                    </li>
+
+
+                    <li id="detail_search_item_li_ps">
+                        <a href="#none" onclick="fnSelectSearchItem('ps', '유엔의 한국문제처리에 관한 미국무부의 문서'); return false;">
+                            유엔의 한국문제처리에 관한 미국무부의 문서
+                        </a>
+                    </li>
+
+
+                    <li id="detail_search_item_li_pu">
+                        <a href="#none" onclick="fnSelectSearchItem('pu', '유엔한국임시위원단 관계 문서'); return false;">
+                            유엔한국임시위원단 관계 문서
+                        </a>
+                    </li>
+
+
+                    <li id="detail_search_item_li_uthr">
+                        <a href="#none" onclick="fnSelectSearchItem('uthr', '유태하 보고서'); return false;">
+                            유태하 보고서
+                        </a>
+                    </li>
+
+
+                    <li id="detail_search_item_li_le">
+                        <a href="#none" onclick="fnSelectSearchItem('le', '이승만서한철'); return false;">
+                            이승만서한철
+                        </a>
+                    </li>
+
+
+                    <li id="detail_search_item_li_dh">
+                        <a href="#none" onclick="fnSelectSearchItem('dh', '자료대한민국사'); return false;">
+                            자료대한민국사
+                        </a>
+                    </li>
+
+
+                    <li id="detail_search_item_li_npfp">
+                        <a href="#none" onclick="fnSelectSearchItem('npfp', '자유신문'); return false;">
+                            자유신문
+                        </a>
+                    </li>
+
+
+                    <li id="detail_search_item_li_jw">
+                        <a href="#none" onclick="fnSelectSearchItem('jw', '직원록자료'); return false;">
+                            직원록자료
+                        </a>
+                    </li>
+
+
+                    <li id="detail_search_item_li_pj">
+                        <a href="#none" onclick="fnSelectSearchItem('pj', '친일파관련문헌'); return false;">
+                            친일파관련문헌
+                        </a>
+                    </li>
+
+
+                    <li id="detail_search_item_li_powr">
+                        <a href="#none" onclick="fnSelectSearchItem('powr', '포로신문보고서'); return false;">
+                            포로신문보고서
+                        </a>
+                    </li>
+
+
+                    <li id="detail_search_item_li_hihd">
+                        <a href="#none" onclick="fnSelectSearchItem('hihd', '한일회담 미국무부 문서'); return false;">
+                            한일회담 미국무부 문서
+                        </a>
+                    </li>
+
+
+                    <li id="detail_search_item_li_fs">
+                        <a href="#none" onclick="fnSelectSearchItem('fs', '해외사료총서'); return false;">
+                            해외사료총서
+                        </a>
+                    </li>
+
+
+                    <li id="detail_search_item_li_cons">
+                        <a href="#none" onclick="fnSelectSearchItem('cons', '헌정사 자료 DB'); return false;">
+                            헌정사 자료 DB
+                        </a>
+                    </li>
+
+
+                    <li id="detail_search_item_li_pn">
+                        <a href="#none" onclick="fnSelectSearchItem('pn', '휴전회담회의록'); return false;">
+                            휴전회담회의록
+                        </a>
+                    </li>
+
+
+                    <li id="detail_search_item_li_frus">
+                        <a href="#none" onclick="fnSelectSearchItem('frus', 'FRUS 자료'); return false;">
+                            FRUS 자료
+                        </a>
+                    </li>
+
+
+                    <li id="detail_search_item_li_swncc">
+                        <a href="#none" onclick="fnSelectSearchItem('swncc', 'SWNCC 자료'); return false;">
+                            SWNCC 자료
+                        </a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //자료선택 -->
+
+<div class="dimmed"></div>
+<div class="dimmed-tr"></div>
+
+<script type="text/javascript">
+
+    // URL 복사하기
+    function fnCopyUrl(paramLevelId) {
+        var levelId = $("#hoiLevelId").html();
+        if (null != paramLevelId && undefined != paramLevelId) {
+            levelId = paramLevelId;
+        }
+        var url = 'https://db.history.go.kr:443/id/' + levelId;
+        copyClipBoard(url);
+    }
+
+</script>
+
+</body>
+</html>

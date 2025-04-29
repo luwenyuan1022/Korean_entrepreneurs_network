@@ -1,0 +1,2 @@
+count_ = {"proxy_server": "http://gwsg.sky-ip.net:1000", "user_list": ["tokensense_dc_1","tokensense_dc_2"], "password": "wRCfvH",
+          "switch_ip_url": "http://refreshsg.sky-ip.net/refresh?user={}&country=sg", "fail_response_max_count": 10}
